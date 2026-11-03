@@ -1,0 +1,16 @@
+# Dependencies and generated output (not scaffolded yet)
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+.vercel/
+.DS_Store
+# Credentials; commit only sanitized examples
+.env*
+!.env.example
+!.env.*.example
+*.pem
+*.key
