@@ -15,3 +15,6 @@ November 3 CC-102 approval: owner accepted CC-101 and authorized minimal mobile-
 | D-09 / Nov 3 | Pin TypeScript 5.9.3 and ESLint 9.39.5 for lint plugin peer compatibility | Implementation correction within approved setup | ESLint deprecation and 17 moderate tooling audit findings remain tracked; no forced upgrades |
 
 Remaining backend decisions: tenant constraints, scoped administrator/reviewer powers, campus event publication, sign-in/bootstrap, retention, and moderation intake. These do not authorize backend work or block separately approved read-only scaffolding. Public deployment/cost/production changes remain separate approvals.
+
+## November 4 — Option A execution update
+Owner approved the read-only fictional-data MVP and deferred all Supabase/auth/publishing work. Landing, dashboard, all three content listings/details, filtering and mobile navigation are implemented. Local production build and 125 tests pass; isolated Chrome journeys at 320/390/1280px passed, including history/refresh and context preservation. CC-102 remains In Review for loading/error retry and fuller accessibility review, not blocked on backend work. No deployment/push performed. See [release evidence and remaining gates](../development/DEMO_RELEASE.md).

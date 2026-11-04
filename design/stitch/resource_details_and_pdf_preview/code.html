@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;background-color:#f8f9ff;min-height:max(884px,100dvh);}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "outline": "#74777e", "on-tertiary-container": "#2f96db", "on-primary-fixed": "#011d35", "primary-container": "#102a43", "inverse-surface": "#213145", "surface-tint": "#49607c", "secondary-fixed": "#7ffc97", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "on-primary-container": "#7a92b0", "primary-fixed-dim": "#b0c9e8", "surface-dim": "#cbdbf5", "tertiary-fixed": "#cce5ff", "on-error-container": "#93000a", "on-primary-fixed-variant": "#314863", "on-primary": "#ffffff", "on-secondary-fixed": "#002109", "inverse-on-surface": "#eaf1ff", "surface-container-low": "#eff4ff", "on-surface": "#0b1c30", "tertiary-fixed-dim": "#93ccff", "on-secondary-container": "#007230", "surface-bright": "#f8f9ff", "tertiary": "#001626", "secondary": "#006e2d", "primary": "#00152a", "on-tertiary-fixed-variant": "#004b73", "surface-container-high": "#dce9ff", "on-secondary-fixed-variant": "#005320", "surface-variant": "#d3e4fe", "on-secondary": "#ffffff", "on-error": "#ffffff", "surface-container-highest": "#d3e4fe", "on-surface-variant": "#43474d", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#62df7d", "surface-container": "#e5eeff", "error-container": "#ffdad6", "surface": "#f8f9ff", "secondary-container": "#7cf994", "on-background": "#0b1c30", "tertiary-container": "#002b45", "inverse-primary": "#b0c9e8", "outline-variant": "#c3c6ce", "primary-fixed": "#d1e4ff", "background": "#f8f9ff", "on-tertiary-fixed": "#001d31" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "margin-mobile": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "margin": "1.5rem", "gutter": "1rem", "gutter-mobile": "0.75rem", "space-lg": "1rem", "space-md": "0.75rem" }, fontFamily: { "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "display-lg": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Inter"], "label-xs": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"] }, fontSize: { "headline-lg-mobile": ["22px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "headline-md": ["20px", { lineHeight: "26px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-xs": ["10px", { lineHeight: "12px", letterSpacing: "0.06em", fontWeight: "700" }], "headline-sm": ["16px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors shrink-0" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><div class="flex flex-col min-w-0"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider truncate">Campus Core</span><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight truncate">Resource Details And Pdf Preview</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><a aria-label="Close or Home" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">close</span></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Contextual Breadcrumb & Secondary Actions Bar -->
+<div class="px-gutter-mobile py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+        CSC 201 · 200L
+      </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-xs text-label-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+        Lecturer Verified
+      </span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Bookmark resource" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface bg-surface-container transition-transform active:scale-90" id="bookmarkBtn">
+<span class="material-symbols-outlined text-[20px]" id="bookmarkIcon">bookmark_border</span>
+</button>
+<button aria-label="Share resource" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface bg-surface-container transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Document Meta & Title Cluster -->
+<div class="px-gutter-mobile pt-space-xs pb-space-md">
+<div class="flex flex-wrap gap-1.5 mb-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs">
+        Harmattan 2024/2025
+      </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs">
+        Lecture Series #04
+      </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs">
+        Faculty of Physical Sciences
+      </span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-2">
+      CSC 201: Data Structures &amp; Algorithms — Complete Lecture Slides &amp; Code Samples
+    </h1>
+<!-- Endorsements & Contributors Pill Group -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center gap-2 p-2 rounded-xl bg-surface-container-low">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">school</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Course Lecturer &amp; Examiner</p>
+<p class="font-label-md text-label-md text-on-surface truncate">Dr. Mrs. N. E. Anigbogu</p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-xs text-label-xs shrink-0">
+          Reviewed
+        </span>
+</div>
+<div class="flex items-center gap-2 px-2 py-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">how_to_reg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Curated by <span class="font-medium text-on-surface">Comr. Chinedu M.</span> (Dept Academic Rep)
+        </span>
+</div>
+</div>
+</div>
+<!-- Quick File Metrics Bar (Bento Ribbon) -->
+<div class="px-gutter-mobile mb-space-lg">
+<div class="grid grid-cols-4 gap-2 bg-surface-container-low p-3 rounded-xl">
+<div class="flex flex-col items-center justify-center text-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Format</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">PDF</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Size</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">8.4 MB</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Length</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">42 pgs</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Saves</span>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">favorite</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">189</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Slide / Document Viewer Box -->
+<div class="px-gutter-mobile mb-space-xl">
+<div class="rounded-xl overflow-hidden shadow-md bg-surface-container-lowest">
+<!-- Viewer Top Action Bar -->
+<div class="bg-primary-container px-3 py-2 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">auto_stories</span>
+<div class="truncate">
+<span class="font-label-md text-label-md" id="slideIndicator">Slide 12 of 42</span>
+<span class="font-label-xs text-label-xs opacity-75 hidden xs:inline"> · BST Traversal</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Zoom out" class="w-7 h-7 rounded flex items-center justify-center hover:bg-surface-tint/20 text-on-primary active:scale-95" id="zoomOutBtn">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-xs text-label-xs px-1" id="zoomLevel">100%</span>
+<button aria-label="Zoom in" class="w-7 h-7 rounded flex items-center justify-center hover:bg-surface-tint/20 text-on-primary active:scale-95" id="zoomInBtn">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button aria-label="Toggle viewer expand" class="w-7 h-7 rounded flex items-center justify-center hover:bg-surface-tint/20 text-on-primary active:scale-95 ml-1" id="fullPreviewBtn">
+<span class="material-symbols-outlined text-[16px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Slide Viewport Content (Simulated Document Canvas) -->
+<div class="p-4 bg-surface-container-lowest transition-transform duration-150 origin-center" id="slideViewport">
+<!-- Slide Header -->
+<div class="flex items-center justify-between pb-3 mb-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Module 4: Tree Structures</p>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-mono">CSC201-L04.pdf</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-3">
+          Binary Search Trees (BST) &amp; In-Order Traversal
+        </h2>
+<!-- High-Precision Diagram: Balanced BST SVG -->
+<div class="w-full bg-surface-container-low rounded-xl p-3 mb-3 flex flex-col items-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant self-start mb-1 uppercase font-semibold">
+            Figure 4.2: Balanced BST Structure
+          </span>
+<svg class="w-full max-w-[280px] h-auto my-1 select-none" viewbox="0 0 320 150" xmlns="http://www.w3.org/2000/svg">
+<!-- Connecting Edges -->
+<line stroke="#74777e" stroke-linecap="round" stroke-width="2" x1="160" x2="80" y1="28" y2="76"></line>
+<line stroke="#74777e" stroke-linecap="round" stroke-width="2" x1="160" x2="240" y1="28" y2="76"></line>
+<line stroke="#74777e" stroke-linecap="round" stroke-width="2" x1="80" x2="40" y1="76" y2="124"></line>
+<line stroke="#74777e" stroke-linecap="round" stroke-width="2" x1="80" x2="120" y1="76" y2="124"></line>
+<line stroke="#74777e" stroke-linecap="round" stroke-width="2" x1="240" x2="200" y1="76" y2="124"></line>
+<line stroke="#74777e" stroke-linecap="round" stroke-width="2" x1="240" x2="280" y1="76" y2="124"></line>
+<!-- Root Node 50 -->
+<circle cx="160" cy="28" fill="#102a43" r="16"></circle>
+<text fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="160" y="33">50</text>
+<!-- Level 1 Nodes -->
+<circle cx="80" cy="76" fill="#213145" r="14"></circle>
+<text fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle" x="80" y="81">30</text>
+<circle cx="240" cy="76" fill="#213145" r="14"></circle>
+<text fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle" x="240" y="81">70</text>
+<!-- Leaf Nodes -->
+<circle cx="40" cy="124" fill="#e5eeff" r="12"></circle>
+<text fill="#0b1c30" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle" x="40" y="128">20</text>
+<circle cx="120" cy="124" fill="#e5eeff" r="12"></circle>
+<text fill="#0b1c30" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle" x="120" y="128">40</text>
+<circle cx="200" cy="124" fill="#e5eeff" r="12"></circle>
+<text fill="#0b1c30" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle" x="200" y="128">60</text>
+<circle cx="280" cy="124" fill="#e5eeff" r="12"></circle>
+<text fill="#0b1c30" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle" x="280" y="128">80</text>
+</svg>
+<p class="font-label-xs text-label-xs text-on-surface-variant text-center mt-1">
+            Property: Left &lt; Root &lt; Right. Height balance: O(log n)
+          </p>
+</div>
+<!-- Code Snippet Container -->
+<div class="rounded-lg bg-surface-container-high p-3 overflow-x-auto text-left font-mono">
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs pb-1">
+<span>Algorithm: InOrder(Node root)</span>
+<span class="text-secondary font-semibold">T: O(N) | S: O(H)</span>
+</div>
+<pre class="font-body-sm text-body-sm text-on-surface leading-tight"><code><span class="text-on-surface-variant">// L-Ro-R Recursive Visit</span>
+<span class="font-bold text-on-secondary-container">void</span> <span class="text-on-surface">inOrder</span>(<span class="font-semibold text-primary-container">Node</span> node) {
+  <span class="font-semibold text-error">if</span> (node == <span class="text-on-surface-variant">null</span>) <span class="font-semibold text-error">return</span>;
+  inOrder(node.left);
+  System.out.print(node.key + <span class="text-on-secondary-container">" "</span>);
+  inOrder(node.right);
+}</code></pre>
+</div>
+</div>
+<!-- Slide Navigation Bar -->
+<div class="px-3 py-2.5 bg-surface-container flex items-center justify-between">
+<button aria-label="Previous slide" class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm active:scale-95 transition-transform" id="prevSlideBtn">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Previous</span>
+</button>
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">
+          Tap or drag to scrub
+        </span>
+<button aria-label="Next slide" class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm active:scale-95 transition-transform" id="nextSlideBtn">
+<span>Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Syllabus & Course Context Bento Section -->
+<div class="px-gutter-mobile mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Syllabus Breakdown</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-xs text-label-xs">
+        3 Credit Units
+      </span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div>
+<p class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider mb-2">Modules Addressed In This Deck</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+            Arrays &amp; Dynamic Vectors
+          </span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+            Singly / Doubly Linked Lists
+          </span>
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+            BST Traversals &amp; Balancing
+          </span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+            Quicksort &amp; Mergesort
+          </span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+            Asymptotic Big-O Analysis
+          </span>
+</div>
+</div>
+<div class="pt-2">
+<p class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider mb-1">Prescribed Reference Textbook</p>
+<div class="flex items-start gap-2 bg-surface-container-low p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] shrink-0 mt-0.5">menu_book</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold">Introduction to Algorithms</span> (CLRS), 3rd Edition — Chapters 10, 12 &amp; 13 (Required Reading for Mid-Semester CBT Exam).
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Peer Reviews & Academic Endorsements -->
+<div class="px-gutter-mobile mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Class Peer Feedback</h3>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-normal">(4.9 ★ · 34 notes)</span>
+</div>
+<button class="font-label-sm text-label-sm text-on-tertiary-container hover:underline">View All</button>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Review Card 1 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-xs text-label-xs text-on-surface font-bold">
+              TO
+            </div>
+<div>
+<span class="font-label-md text-label-md text-on-surface">Tobechi O.</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant"> · Software Eng. 200L</span>
+</div>
+</div>
+<div class="flex text-secondary text-[12px]">
+            ★★★★★
+          </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          "The recursion tracing diagrams on slides 14-18 saved me during the test. Matches Dr. Anigbogu's board illustrations word for word."
+        </p>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-xs text-label-xs text-on-surface font-bold">
+              FA
+            </div>
+<div>
+<span class="font-label-md text-label-md text-on-surface">Fatima A.</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant"> · Computer Sci. 200L</span>
+</div>
+</div>
+<div class="flex text-secondary text-[12px]">
+            ★★★★★
+          </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          "Well annotated and zero missing slides. Clean syntax examples in Java &amp; Python."
+        </p>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Actions Dock (Safe & High Utility) -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/90 backdrop-blur-md px-gutter-mobile py-space-sm shadow-[0_-4px_16px_rgba(0,0,0,0.06)] pb-safe">
+<div class="max-w-md mx-auto flex items-center gap-2">
+<!-- Save Offline Toggle Button -->
+<button aria-label="Toggle offline availability" class="flex-1 h-11 px-3 rounded-xl bg-surface-container text-on-surface flex items-center justify-center gap-1.5 font-label-md text-label-md active:scale-95 transition-transform" id="offlineToggleBtn">
+<span class="material-symbols-outlined text-[18px]" id="offlineIcon">cloud_download</span>
+<span id="offlineLabel">Save Offline</span>
+</button>
+<!-- Primary Action CTA -->
+<button aria-label="Download Document PDF" class="flex-[2] h-11 px-4 rounded-xl bg-primary-container text-on-primary flex items-center justify-center gap-2 font-label-md text-label-md shadow-sm active:bg-primary transition-all active:scale-[0.98]" id="downloadPdfBtn">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF (8.4 MB)</span>
+</button>
+</div>
+</div>
+<!-- Micro-interaction Toast Notification -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2 bg-inverse-surface text-inverse-on-surface rounded-full shadow-lg font-label-sm text-label-sm flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-200" id="toastNotification">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" id="toastIcon">check_circle</span>
+<span id="toastMessage">Downloaded successfully</span>
+</div>
+</div>
+<script>
+  (function initResourceDetailView() {
+    let currentSlide = 12;
+    const totalSlides = 42;
+    let currentZoom = 100;
+    let isBookmarked = false;
+    let isSavedOffline = false;
+
+    const slideIndicator = document.getElementById('slideIndicator');
+    const slideViewport = document.getElementById('slideViewport');
+    const zoomLevelEl = document.getElementById('zoomLevel');
+    const prevBtn = document.getElementById('prevSlideBtn');
+    const nextBtn = document.getElementById('nextSlideBtn');
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+    const bookmarkBtn = document.getElementById('bookmarkBtn');
+    const bookmarkIcon = document.getElementById('bookmarkIcon');
+    const offlineToggleBtn = document.getElementById('offlineToggleBtn');
+    const offlineIcon = document.getElementById('offlineIcon');
+    const offlineLabel = document.getElementById('offlineLabel');
+    const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+    const toast = document.getElementById('toastNotification');
+    const toastMessage = document.getElementById('toastMessage');
+
+    function showToast(text, icon = 'check_circle') {
+      if (!toast) return;
+      toastMessage.textContent = text;
+      const iconEl = document.getElementById('toastIcon');
+      if (iconEl) iconEl.textContent = icon;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2400);
+    }
+
+    function updateSlide(delta) {
+      currentSlide = Math.max(1, Math.min(totalSlides, currentSlide + delta));
+      if (slideIndicator) {
+        slideIndicator.textContent = 'Slide ' + currentSlide + ' of ' + totalSlides;
+      }
+      if (slideViewport) {
+        slideViewport.style.opacity = '0.4';
+        setTimeout(() => {
+          slideViewport.style.opacity = '1';
+        }, 80);
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => updateSlide(-1));
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => updateSlide(1));
+    }
+
+    if (zoomInBtn && zoomLevelEl && slideViewport) {
+      zoomInBtn.addEventListener('click', () => {
+        if (currentZoom < 150) {
+          currentZoom += 15;
+          zoomLevelEl.textContent = currentZoom + '%';
+          slideViewport.style.transform = 'scale(' + (currentZoom / 100) + ')';
+        }
+      });
+    }
+
+    if (zoomOutBtn && zoomLevelEl && slideViewport) {
+      zoomOutBtn.addEventListener('click', () => {
+        if (currentZoom > 75) {
+          currentZoom -= 15;
+          zoomLevelEl.textContent = currentZoom + '%';
+          slideViewport.style.transform = 'scale(' + (currentZoom / 100) + ')';
+        }
+      });
+    }
+
+    if (bookmarkBtn && bookmarkIcon) {
+      bookmarkBtn.addEventListener('click', () => {
+        isBookmarked = !isBookmarked;
+        if (isBookmarked) {
+          bookmarkIcon.textContent = 'bookmark';
+          bookmarkIcon.style.fontVariationSettings = "'FILL' 1";
+          bookmarkIcon.classList.add('text-secondary');
+          showToast('Added to Saved Resources', 'bookmark');
+        } else {
+          bookmarkIcon.textContent = 'bookmark_border';
+          bookmarkIcon.style.fontVariationSettings = "'FILL' 0";
+          bookmarkIcon.classList.remove('text-secondary');
+          showToast('Removed from Saved Resources', 'bookmark_border');
+        }
+      });
+    }
+
+    if (offlineToggleBtn && offlineIcon && offlineLabel) {
+      offlineToggleBtn.addEventListener('click', () => {
+        isSavedOffline = !isSavedOffline;
+        if (isSavedOffline) {
+          offlineIcon.textContent = 'check_circle';
+          offlineLabel.textContent = 'Offline Ready';
+          offlineToggleBtn.classList.replace('bg-surface-container', 'bg-secondary-container');
+          offlineToggleBtn.classList.replace('text-on-surface', 'text-on-secondary-container');
+          showToast('Deck cached for offline review', 'download_done');
+        } else {
+          offlineIcon.textContent = 'cloud_download';
+          offlineLabel.textContent = 'Save Offline';
+          offlineToggleBtn.classList.replace('bg-secondary-container', 'bg-surface-container');
+          offlineToggleBtn.classList.replace('text-on-secondary-container', 'text-on-surface');
+          showToast('Cache cleared for this file', 'cloud_off');
+        }
+      });
+    }
+
+    if (downloadPdfBtn) {
+      downloadPdfBtn.addEventListener('click', () => {
+        const originalContent = downloadPdfBtn.innerHTML;
+        downloadPdfBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Preparing 8.4 MB...</span>';
+        setTimeout(() => {
+          downloadPdfBtn.innerHTML = originalContent;
+          showToast('Download started: CSC201_Module4.pdf', 'file_download_done');
+        }, 1200);
+      });
+    }
+  })();
+</script></main></body></html>

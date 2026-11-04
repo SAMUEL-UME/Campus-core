@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { demoTaxonomy, type Taxonomy } from "../../data/demo-taxonomy";
+import { academicTaxonomy, type Taxonomy } from "../../data/academic-taxonomy";
 import {
   changeContext,
   emptyContext,
@@ -11,8 +11,8 @@ import {
 
 const selected = {
   university: "unizik",
-  faculty: "demo-sciences",
-  department: "computer-science",
+  faculty: "unizik-physical-sciences",
+  department: "unizik-physical-sciences-computer-science",
   level: "200",
 };
 describe("academic context", () => {
@@ -23,12 +23,19 @@ describe("academic context", () => {
       invalid: false,
     });
   });
-  it.each(demoTaxonomy.departments.map((item) => item.id))(
-    "supports every demo level for %s",
+  it.each(academicTaxonomy.departments)(
+    "supports every supplied level for $name",
     (department) => {
-      for (const level of ["100", "200", "300", "400"])
+      for (const level of academicTaxonomy.levels.filter(
+        (item) => item.departmentId === department.id,
+      ))
         expect(
-          resolveContext({ ...selected, department, level }).complete,
+          resolveContext({
+            ...selected,
+            faculty: department.facultyId,
+            department: department.id,
+            level: level.id,
+          }).complete,
         ).toBe(true);
     },
   );
@@ -43,9 +50,15 @@ describe("academic context", () => {
       department: "",
       level: "",
     });
-    expect(changeContext(selected, "department", "statistics")).toEqual({
+    expect(
+      changeContext(
+        selected,
+        "department",
+        "unizik-physical-sciences-statistics",
+      ),
+    ).toEqual({
       ...selected,
-      department: "statistics",
+      department: "unizik-physical-sciences-statistics",
       level: "",
     });
     expect(changeContext(selected, "level", "400")).toEqual({
@@ -76,19 +89,19 @@ describe("academic context", () => {
   it("supports additional institutions without accepting mismatched ancestry", () => {
     const taxonomy: Taxonomy = {
       universities: [
-        ...demoTaxonomy.universities,
+        ...academicTaxonomy.universities,
         { id: "other", name: "Synthetic university" },
       ],
       faculties: [
-        ...demoTaxonomy.faculties,
+        ...academicTaxonomy.faculties,
         { id: "arts", universityId: "other", name: "Arts" },
       ],
       departments: [
-        ...demoTaxonomy.departments,
+        ...academicTaxonomy.departments,
         { id: "history", facultyId: "arts", name: "History" },
       ],
       levels: [
-        ...demoTaxonomy.levels,
+        ...academicTaxonomy.levels,
         { id: "500", departmentId: "history", name: "500 level" },
       ],
     };
@@ -123,10 +136,10 @@ describe("section navigation", () => {
     expect(
       resolveContext(Object.fromEntries(url.searchParams)).context,
     ).toEqual(selected);
-    expect(url.pathname).toBe(id === "dashboard" ? "/" : `/${id}`);
+    expect(url.pathname).toBe(`/${id}`);
   });
   it("preserves partial context and avoids empty query strings", () => {
-    expect(sectionHref("dashboard", emptyContext)).toBe("/");
+    expect(sectionHref("dashboard", emptyContext)).toBe("/dashboard");
     expect(
       sectionHref("events", { ...emptyContext, university: "unizik" }),
     ).toBe("/events?university=unizik");

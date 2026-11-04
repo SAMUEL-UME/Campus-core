@@ -1,5 +1,7 @@
 # Campus Core — System Architecture
 
+CC-102 directory implementation: `src/data/academic-taxonomy.ts` derives flat discovery options from the owner-supplied `src/data/unizik-academic-taxonomy.ts`. Supplied stable IDs are URL values; server validation checks university → faculty → department → supported level. Names, scoped slugs and verification notes are preserved. No backend/schema/service changes; existing backend approval gate remains. See [verification](development/STUDENT_EXPERIENCE_VERIFICATION.md).
+
 **Version:** 0.1 | **Status:** Proposed; no implementation verified | **Technical owner:** Samuel
 
 ## 1. Architectural goals

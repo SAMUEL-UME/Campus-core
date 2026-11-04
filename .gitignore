@@ -8,6 +8,10 @@ test-results/
 *.tsbuildinfo
 .vercel/
 .DS_Store
+
+# Local documentation and design references
+# docs/
+# design/
 # Credentials; commit only sanitized examples
 .env*
 !.env.example

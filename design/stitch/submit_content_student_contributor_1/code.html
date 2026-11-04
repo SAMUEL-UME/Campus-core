@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;background-color:#f8f9ff;min-height:max(884px,100dvh);}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "outline": "#74777e", "on-tertiary-container": "#2f96db", "on-primary-fixed": "#011d35", "primary-container": "#102a43", "inverse-surface": "#213145", "surface-tint": "#49607c", "secondary-fixed": "#7ffc97", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "on-primary-container": "#7a92b0", "primary-fixed-dim": "#b0c9e8", "surface-dim": "#cbdbf5", "tertiary-fixed": "#cce5ff", "on-error-container": "#93000a", "on-primary-fixed-variant": "#314863", "on-primary": "#ffffff", "on-secondary-fixed": "#002109", "inverse-on-surface": "#eaf1ff", "surface-container-low": "#eff4ff", "on-surface": "#0b1c30", "tertiary-fixed-dim": "#93ccff", "on-secondary-container": "#007230", "surface-bright": "#f8f9ff", "tertiary": "#001626", "secondary": "#006e2d", "primary": "#00152a", "on-tertiary-fixed-variant": "#004b73", "surface-container-high": "#dce9ff", "on-secondary-fixed-variant": "#005320", "surface-variant": "#d3e4fe", "on-secondary": "#ffffff", "on-error": "#ffffff", "surface-container-highest": "#d3e4fe", "on-surface-variant": "#43474d", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#62df7d", "surface-container": "#e5eeff", "error-container": "#ffdad6", "surface": "#f8f9ff", "secondary-container": "#7cf994", "on-background": "#0b1c30", "tertiary-container": "#002b45", "inverse-primary": "#b0c9e8", "outline-variant": "#c3c6ce", "primary-fixed": "#d1e4ff", "background": "#f8f9ff", "on-tertiary-fixed": "#001d31" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "margin-mobile": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "margin": "1.5rem", "gutter": "1rem", "gutter-mobile": "0.75rem", "space-lg": "1rem", "space-md": "0.75rem" }, fontFamily: { "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "display-lg": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Inter"], "label-xs": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"] }, fontSize: { "headline-lg-mobile": ["22px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "headline-md": ["20px", { lineHeight: "26px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-xs": ["10px", { lineHeight: "12px", letterSpacing: "0.06em", fontWeight: "700" }], "headline-sm": ["16px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors shrink-0" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><div class="flex flex-col min-w-0"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider truncate">Campus Core</span><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight truncate">Submit Content</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><a aria-label="Close or Home" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">close</span></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Form Container -->
+<div class="px-gutter-mobile py-space-md flex flex-col gap-space-lg max-w-xl mx-auto w-full">
+<!-- Contributor Header Card & Karma Reward -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover shadow-sm" data-alt="Portrait photo of an energetic university student smiling with library shelves in soft focus behind him, wearing glasses and a navy sweater, warm natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr6PRnD2xgbiodZHEEM21WN1N8OryGlhNHsLd_7lCvHxkSrb8Fvz3tZVWNqkfiBqisO3vqY5tcmbpm_0ojpG8QoOiczKIQROXPA5uz0hCXxdOxQKdMxyZ58zBgAzhKfFrhxgI5GBnriROjlzg4GK7D7evYpEHtgXQ4uwnpY-onG6azheR59lDJMCGlWoHOUhqBjfgsIhxPT1VlZ0cTuRfKP-uymmbznbsohRzLnKXX"/>
+<span class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary rounded-full w-4 h-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Demola Adeleke</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs px-1.5 py-0.5 rounded-full uppercase shrink-0">L3 Lead</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Computer Science · Faculty Rep</span>
+</div>
+</div>
+<!-- Karma Badge Pill -->
+<div class="flex items-center gap-1 bg-secondary-container/60 px-space-sm py-1 rounded-full shrink-0">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-secondary-container font-bold leading-none">+45 pts</span>
+<span class="font-label-xs text-label-xs text-secondary leading-none">Earn Karma</span>
+</div>
+</div>
+</div>
+<!-- Stepper Indicator -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Step 1 of 3</span>
+<span class="font-label-sm text-label-sm text-on-primary-container font-semibold">Material Details &amp; File</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-primary-container h-full rounded-full w-1/3 transition-all duration-300"></div>
+<div class="bg-transparent h-full w-2/3"></div>
+</div>
+<div class="flex justify-between items-center font-label-xs text-label-xs text-on-surface-variant pt-0.5">
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container inline-block"></span>1. Details &amp; Upload
+        </span>
+<span class="opacity-60">2. Tagging</span>
+<span class="opacity-60">3. Final Verification</span>
+</div>
+</div>
+<!-- Live Admin Desk Status Banner -->
+<div class="bg-surface-container-low rounded-xl px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="relative flex h-2 w-2 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Connected to Admin Desk</span>
+</div>
+<div class="bg-surface-container-high/70 px-2 py-0.5 rounded-full shrink-0">
+<span class="font-label-xs text-label-xs text-on-surface-variant font-semibold">Queue: 6 Pending</span>
+</div>
+</div>
+<!-- Material Type Selection Cards -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-baseline px-0.5">
+<label class="font-headline-sm text-headline-sm text-on-surface">Material Category</label>
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Required</span>
+</div>
+<div class="grid grid-cols-1 gap-space-xs" id="material-type-group">
+<!-- Selected Card: Past Question -->
+<button class="w-full text-left bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-md shadow-sm transition-all duration-150 flex items-center justify-between gap-space-sm cursor-pointer" onclick="selectMaterialType(this)" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Past Question &amp; Resource</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-1.5 py-0.5 rounded-full uppercase">Popular</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Examinations, mid-terms, and tutorial problem sheets</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary shrink-0 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Official Memo -->
+<button class="w-full text-left bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-md shadow-sm transition-all duration-150 flex items-center justify-between gap-space-sm cursor-pointer opacity-80" onclick="selectMaterialType(this)" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Official Memo / Circular</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">HOD notices, board timetables &amp; senate circulars</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline shrink-0 text-[22px]">radio_button_unchecked</span>
+</button>
+<!-- Workshop & Sessions -->
+<button class="w-full text-left bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-md shadow-sm transition-all duration-150 flex items-center justify-between gap-space-sm cursor-pointer opacity-80" onclick="selectMaterialType(this)" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">co_present</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Workshop / Campus Session</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Peer study slides, guest lectures &amp; lab handouts</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline shrink-0 text-[22px]">radio_button_unchecked</span>
+</button>
+</div>
+</div>
+<!-- Metadata Section Form Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between border-b pb-space-xs" style="border-color: transparent;">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Material Metadata</h2>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Academic Indexing</span>
+</div>
+<!-- Document Title Input -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="doc-title">Document / Material Title</label>
+<span class="font-label-xs text-label-xs text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span> Validated title format
+          </span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-on-surface rounded-xl px-space-md py-3 pr-10 font-body-md text-body-md focus:outline-none focus:bg-surface-container focus:ring-0 transition-colors" id="doc-title" placeholder="e.g. GST 101 Lecture Summaries 2024" type="text" value="CSC 201 Mid-Semester Practice Questions"/>
+<div class="absolute right-3 text-secondary flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Course Code Selector Pills -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Associated Course Code</label>
+<div class="flex flex-wrap gap-space-xs" id="course-pills">
+<button class="px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all" onclick="selectCoursePill(this)" type="button">
+            CSC 201
+          </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all" onclick="selectCoursePill(this)" type="button">
+            CSC 203
+          </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all" onclick="selectCoursePill(this)" type="button">
+            CSC 205
+          </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all" onclick="selectCoursePill(this)" type="button">
+            MTH 201
+          </button>
+<button class="px-2.5 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface-variant font-label-md text-label-md flex items-center gap-1 hover:bg-surface-container-high transition-all" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> Custom
+          </button>
+</div>
+</div>
+<!-- Target Level & Semester Cycle (Split Grid) -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Target Academic Level</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface rounded-xl px-space-md py-2.5 font-body-sm text-body-sm appearance-none focus:outline-none focus:bg-surface-container">
+<option selected="">200 Level</option>
+<option>100 Level</option>
+<option>300 Level</option>
+<option>400 Level</option>
+<option>500 Level</option>
+</select>
+<div class="absolute right-3 top-3 text-on-surface-variant pointer-events-none flex items-center">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Semester Cycle</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface rounded-xl px-space-md py-2.5 font-body-sm text-body-sm appearance-none focus:outline-none focus:bg-surface-container">
+<option selected="">Harmattan</option>
+<option>Rain</option>
+<option>Supplementary</option>
+</select>
+<div class="absolute right-3 top-3 text-on-surface-variant pointer-events-none flex items-center">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Lecturer In Charge -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="lecturer-name">Lecturer in charge / Endorsing Faculty</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-on-surface rounded-xl px-space-md py-2.5 font-body-md text-body-md focus:outline-none focus:bg-surface-container transition-colors" id="lecturer-name" placeholder="Full Name and Department Title" type="text" value="Dr. Mrs. N. E. Anigbogu"/>
+<div class="absolute right-3 text-on-surface-variant flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+</div>
+</div>
+<!-- Study Guidance Text Area with Markdown note tips -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="study-guidance">Study Guidance &amp; Context Notes</label>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Markdown supported</span>
+</div>
+<textarea class="w-full bg-surface-container-low text-on-surface rounded-xl p-space-md font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors resize-none" id="study-guidance" placeholder="Include question focus areas, tips for section B algorithms, or recommended references for junior students..." rows="3">Emphasis on Module 3: Binary Search Trees and Big-O notation. Questions 4 &amp; 5 carry 40% weightage according to lecturer briefing.</textarea>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-xs text-label-xs pt-0.5">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>Tip: Use `*bullet*` or `**bold**` to emphasize exam pitfalls</span>
+</div>
+</div>
+</div>
+<!-- Attached Source Document Upload Section -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Attached Source Document</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">High-resolution scans preferred</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-xs text-label-xs px-2 py-0.5 rounded-full font-semibold">1 of 3 Files</span>
+</div>
+<!-- Uploaded Document Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm transition-all duration-200" id="uploaded-file-card">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">CSC201_2023_Harmattan_Mock_Questions.pdf</span>
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs text-on-surface-variant">
+<span>3.8 MB</span>
+<span>•</span>
+<span>14 Pages</span>
+<span>•</span>
+<span class="text-secondary font-semibold">Ready</span>
+</div>
+</div>
+</div>
+<button aria-label="Remove document" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-colors" onclick="removeAttachment()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-transparent">
+<!-- Virus Checked Badge -->
+<div class="flex items-center gap-1 bg-secondary-container/70 text-on-secondary-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-xs text-label-xs font-bold uppercase tracking-wider">Virus-Checked · Clean</span>
+</div>
+<!-- Document Action Buttons -->
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors" onclick="previewAttachment()" type="button">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Preview
+            </button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">crop_free</span> Re-scan
+            </button>
+</div>
+</div>
+</div>
+<!-- Upload Drop Zone / Camera Scan Prompt -->
+<div class="bg-surface-container-low/60 rounded-xl p-space-lg flex flex-col items-center justify-center text-center gap-space-sm cursor-pointer hover:bg-surface-container-low transition-colors" onclick="triggerFileInput()">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Add Supplementary Pages or Camera Scan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">PDF, JPEG, or HEIC (Up to 25 MB total limit)</span>
+</div>
+</div>
+</div>
+<!-- Academic Integrity Declaration Checkboxes -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Academic Integrity Declaration</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        As a verified peer contributor, your submissions represent your academic cohort.
+      </p>
+<div class="flex flex-col gap-space-sm pt-1">
+<!-- Checkbox 1 -->
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary-container bg-surface-container focus:ring-0 cursor-pointer" id="decl-confidentiality" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-tight">
+            I confirm this material does not breach examination confidentiality, embargo periods, or faculty copyright restrictions.
+          </span>
+</label>
+<!-- Checkbox 2 -->
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary-container bg-surface-container focus:ring-0 cursor-pointer" id="decl-authenticity" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-tight">
+            I verify that scanned pages are genuine past assessments, fully legible, and free of watermarks from competing unapproved services.
+          </span>
+</label>
+</div>
+</div>
+<!-- Preview Modal Sheet (Hidden by default, triggered on preview click) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex items-end justify-center p-0 transition-opacity duration-200 hidden" id="preview-modal" onclick="closePreviewModal(event)">
+<div class="bg-surface-container-lowest rounded-t-2xl w-full max-w-lg p-space-lg flex flex-col gap-space-md shadow-xl" onclick="event.stopPropagation()">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container">description</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Document Inspection</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closePreviewModalDirect()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="h-64 rounded-xl bg-surface-container-low overflow-hidden relative flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="High quality scanned academic examination paper for Computer Science test showing algorithms, diagrams, course code CSC 201 stamped on top right with clean legible text" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTaOzdnFI0aD4LgF1rrhh2fDjpU35f0Cmxn8QJ8vUbdkYTd-28zDLHavq4OYUoK4zoWnyWq8l2b-kCrTiWJ_coJ0Vx-HyPdjY6z2yzegzSZuiYW-BVZIJiQpLaornYypORCowEa0FbHBLObfLdBZsCyL72D0j5AENkeQtOEoLY3JZ1XEb5ef0lhBVf3glfae__zvPzN6n1yxsSm8NS7cOnad4pTafBVoCDIFdroIBr"/>
+<div class="absolute bottom-2 left-2 bg-inverse-surface/80 text-inverse-on-surface px-2 py-0.5 rounded text-label-xs font-label-xs">
+            Page 1 of 14 · Crisp Optical Scan
+          </div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Metadata parity checked</span>
+<span class="text-secondary font-semibold">Moderation Ready</span>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm" onclick="closePreviewModalDirect()" type="button">
+          Dismiss Inspection
+        </button>
+</div>
+</div>
+<!-- Submit Section with Turnaround info -->
+<div class="flex flex-col gap-space-sm pt-space-xs pb-space-lg">
+<button class="w-full py-3.5 px-space-lg rounded-xl bg-primary-container active:bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99] cursor-pointer" id="submit-content-btn" onclick="handleSubmission(this)" type="button">
+<span>Submit for Moderation Review</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Turnaround Time Notice -->
+<div class="flex items-center justify-center gap-1.5 text-center text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
+<span>Standard turnaround: moderated within <strong class="text-on-surface font-semibold">2–4 hours</strong> by peer chairs</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function selectMaterialType(selectedBtn) {
+    const group = document.getElementById('material-type-group');
+    if (!group) return;
+    const buttons = group.querySelectorAll('button');
+    
+    buttons.forEach(btn => {
+      btn.classList.remove('opacity-100');
+      btn.classList.add('opacity-80');
+      const icon = btn.querySelector('.material-symbols-outlined:last-child');
+      if (icon) {
+        icon.textContent = 'radio_button_unchecked';
+        icon.className = 'material-symbols-outlined text-outline shrink-0 text-[22px]';
+        icon.style.fontVariationSettings = '';
+      }
+    });
+
+    selectedBtn.classList.remove('opacity-80');
+    selectedBtn.classList.add('opacity-100');
+    const selectedIcon = selectedBtn.querySelector('.material-symbols-outlined:last-child');
+    if (selectedIcon) {
+      selectedIcon.textContent = 'check_circle';
+      selectedIcon.className = 'material-symbols-outlined text-secondary shrink-0 text-[22px]';
+      selectedIcon.style.fontVariationSettings = "'FILL' 1";
+    }
+  }
+
+  function selectCoursePill(pillBtn) {
+    const container = document.getElementById('course-pills');
+    if (!container) return;
+    const buttons = container.querySelectorAll('button:not(:last-child)');
+    
+    buttons.forEach(btn => {
+      btn.className = 'px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all';
+    });
+
+    pillBtn.className = 'px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all';
+  }
+
+  function removeAttachment() {
+    const card = document.getElementById('uploaded-file-card');
+    if (card) {
+      card.style.opacity = '0.3';
+      setTimeout(() => {
+        card.innerHTML = `
+          <div class="flex items-center justify-between p-1 text-on-surface-variant font-body-sm text-body-sm">
+            <span>Attachment cleared. Tap below to upload replacement.</span>
+            <button type="button" class="text-secondary font-semibold underline text-label-sm" onclick="location.reload()">Undo</button>
+          </div>
+        `;
+        card.style.opacity = '1';
+      }, 150);
+    }
+  }
+
+  function previewAttachment() {
+    const modal = document.getElementById('preview-modal');
+    if (modal) {
+      modal.classList.remove('hidden');
+    }
+  }
+
+  function closePreviewModal(event) {
+    const modal = document.getElementById('preview-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+  }
+
+  function closePreviewModalDirect() {
+    const modal = document.getElementById('preview-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+  }
+
+  function triggerFileInput() {
+    alert('Campus Core File Picker: Ready for supplementary exam documents.');
+  }
+
+  function handleSubmission(btn) {
+    const decl1 = document.getElementById('decl-confidentiality');
+    const decl2 = document.getElementById('decl-authenticity');
+
+    if (!decl1.checked || !decl2.checked) {
+      alert('Please check both academic integrity declarations before submitting.');
+      return;
+    }
+
+    const originalContent = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = `
+      <span class="inline-block animate-spin material-symbols-outlined text-[20px]">progress_activity</span>
+      <span>Encrypting & Dispatching to Desk...</span>
+    `;
+
+    setTimeout(() => {
+      btn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        <span>Submitted! (+45 Karma Queued)</span>
+      `;
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-secondary');
+    }, 1200);
+  }
+</script></main></body></html>

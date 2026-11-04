@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-fixed":"#001d31","primary-container":"#102a43","surface-container":"#e5eeff","secondary-fixed-dim":"#62df7d","on-error-container":"#93000a","on-tertiary-container":"#2f96db","on-secondary-container":"#007230","tertiary-fixed-dim":"#93ccff","error-container":"#ffdad6","on-background":"#0b1c30","surface-container-high":"#dce9ff","on-surface":"#0b1c30","surface-bright":"#f8f9ff","tertiary-fixed":"#cce5ff","surface-tint":"#49607c","secondary-fixed":"#7ffc97","on-primary":"#ffffff","outline-variant":"#c3c6ce","on-primary-fixed":"#011d35","tertiary-container":"#002b45","secondary-container":"#7cf994","outline":"#74777e","surface-dim":"#cbdbf5","surface-container-low":"#eff4ff","primary":"#00152a","surface-container-lowest":"#ffffff","on-surface-variant":"#43474d","background":"#f8f9ff","on-tertiary":"#ffffff","surface":"#f8f9ff","primary-fixed":"#d1e4ff","on-secondary":"#ffffff","error":"#ba1a1a","inverse-on-surface":"#eaf1ff","on-primary-container":"#7a92b0","secondary":"#006e2d","inverse-surface":"#213145","on-tertiary-fixed-variant":"#004b73","on-primary-fixed-variant":"#314863","on-secondary-fixed":"#002109","surface-variant":"#d3e4fe","on-secondary-fixed-variant":"#005320","primary-fixed-dim":"#b0c9e8","surface-container-highest":"#d3e4fe","on-error":"#ffffff","tertiary":"#001626","inverse-primary":"#b0c9e8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter":"1rem","space-xl":"1.5rem","margin":"1.5rem","margin-mobile":"1rem","space-md":"0.75rem","space-sm":"0.5rem","space-lg":"1rem","gutter-mobile":"0.75rem"},"fontFamily":{"label-md":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"label-xs":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.06em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface text-on-surface antialiased selection:bg-surface-container-high"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="p-space-lg bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shadow-sm"><span class="material-symbols-outlined text-[20px] text-on-primary">account_balance</span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">Campus Core</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs uppercase tracking-wider">ADM</span></div><span class="font-label-xs text-label-xs text-on-surface-variant truncate">UNIZIK Registry &amp; Moderation</span></div></div></div><nav class="flex-1 px-space-md py-space-sm flex flex-col gap-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-xl shadow-sm"><div class="px-space-sm py-1 font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Institutional Governance</div><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group" data-path="overview" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-on-surface transition-colors">dashboard</span><span class="font-body-md text-body-md">Overview</span></div><span class="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group" data-path="pending-submissions" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-on-surface transition-colors">pending_actions</span><span class="font-body-md text-body-md">Pending Submissions</span></div><span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-xs text-label-xs shadow-xs">14</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group" data-path="content-review" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-on-surface transition-colors">rate_review</span><span class="font-body-md text-body-md">Content Review</span></div></a><div class="mt-space-md px-space-sm py-1 font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Dispatches &amp; Assets</div><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 transition-all group bg-primary-container text-on-primary font-label-md rounded-xl shadow-sm" data-path="announcement-management" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-on-surface transition-colors">campaign</span><span class="font-body-md text-body-md">Announcement Mgmt</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group" data-path="resource-management" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-on-surface transition-colors">folder_special</span><span class="font-body-md text-body-md">Resource Management</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group" data-path="publisher-verification" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-on-surface transition-colors">verified_user</span><span class="font-body-md text-body-md">Publisher Verification</span></div></a></nav><div class="p-space-md bg-surface-container-low"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] mb-space-sm"><div class="flex items-center gap-space-sm mb-1.5"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="min-w-0 flex-1"><p class="font-label-md text-label-md text-on-surface truncate">Dr. K. O. Okoye</p><p class="font-body-sm text-body-sm text-on-surface-variant truncate">Head of Dept / Chief Moderator</p></div></div><div class="flex items-center justify-between pt-1.5"><span class="font-label-xs text-label-xs text-on-surface-variant">PASSKEY</span><span class="font-label-xs text-label-xs text-secondary font-bold tracking-tight bg-surface-container-lowest px-1.5 py-0.5 rounded">#NAU-ADM-892</span></div></div><a class="flex items-center justify-center gap-space-xs w-full py-2 px-space-md rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" data-path="student-view" href="#"><span class="material-symbols-outlined text-[16px]">school</span><span>Switch to Student View</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md rounded-xl bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none shadow-[0_1px_8px_rgba(0,0,0,0.04)]" placeholder="Search matric number, memos, course vaults..." type="text"/></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-1.5 rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">event_note</span><span class="font-label-md text-label-md text-on-surface whitespace-nowrap">Harmattan 2024/2025</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-space-md py-1.5 bg-surface-container-lowest rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-xs text-label-xs text-secondary whitespace-nowrap">Portal Sync Live · 100%</span></div><button class="flex items-center gap-1.5 px-space-md py-2 bg-error text-on-error rounded-xl font-label-md text-label-md shadow-sm hover:opacity-95 transition-opacity"><span class="material-symbols-outlined text-[18px]">e911_emergency</span><span>Emergency Broadcast</span></button><button class="relative w-10 h-10 rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface flex items-center justify-center shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface w-full px-8 pb-space-xl"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden rounded-2xl bg-surface-container-low shadow-sm mb-space-xl p-space-xl">
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-surface-variant/40 blur-3xl pointer-events-none"></div>
+<div class="absolute right-40 -bottom-24 w-64 h-64 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<div class="relative flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>Admin</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Dispatches</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Announcement Management</span>
+</div>
+<div class="flex items-baseline gap-space-md mt-1">
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">Official Bulletins &amp; Emergency Broadcast Control</h1>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-md text-label-md">
+            142 Total Circulars
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Authorized registry terminal for dispatching authenticated academic memos, syndicate class webhooks, and managing faculty emergency alerts.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm hover:bg-surface-container transition-colors" id="viewArchiveBtn">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+<span>Archival Vault</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-md hover:bg-primary-container transition-all" id="openComposeBtn">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Compose New Circular</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl">
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operational Status</span>
+<span class="font-headline-sm text-headline-sm text-primary mt-1">Active Urgent Broadcasts</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">e911_emergency</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-error">2</span>
+<span class="font-label-md text-label-md text-on-surface-variant">live critical banners across campus portal</span>
+</div>
+<div class="mt-4 pt-3 flex flex-col gap-1.5 bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm flex items-center gap-1.5 truncate">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+            MTH 201 Hall Reallocation (Auditorium B)
+          </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant shrink-0">Now</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm flex items-center gap-1.5 truncate">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+            GST 101 Shift 3 (14:30 CBT Batch)
+          </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant shrink-0">24m ago</span>
+</div>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Multi-Channel Relay</span>
+<span class="font-headline-sm text-headline-sm text-primary mt-1">Syndication Delivery Rate</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">send_and_archive</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<div>
+<span class="font-display-lg text-display-lg text-secondary">99.4%</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4,280 / 4,305 students reached</p>
+</div>
+<div class="w-16 h-16 shrink-0 relative flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="99.4, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-xs text-label-xs font-bold text-secondary">4.2k</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">forum</span>
+<span class="font-label-sm text-label-sm text-on-surface">WhatsApp Webhook Pipeline</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-xs text-label-xs font-bold">OPERATIONAL</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cryptographic Governance</span>
+<span class="font-headline-sm text-headline-sm text-primary mt-1">Pending Signatures</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">signature</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-primary">1</span>
+<span class="font-label-md text-label-md text-on-surface-variant">dispatch awaiting HOD verification key</span>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface truncate">CSC 400 Thesis Moderation Memo</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Dean's Seal Required</span>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-xs text-label-xs hover:bg-primary-container transition-colors">
+          Sign Now
+        </button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex items-center justify-between flex-wrap gap-space-md border-b-0 pb-1">
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-xl shadow-xs overflow-x-auto">
+<button class="filter-tab px-4 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-xs transition-all" data-tab="all">
+          All Bulletins (142)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all" data-tab="urgent">
+          Urgent Memos (2)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all" data-tab="exam">
+          Exam Timetables (18)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all" data-tab="senate">
+          Senate Circulars (9)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all" data-tab="dept">
+          Department Notices (113)
+        </button>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" id="circularSearch" placeholder="Ref code, keywords..." type="text"/>
+</div>
+<select class="h-10 px-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs">
+<option>Faculty: Physical Sciences</option>
+<option>Faculty: Engineering</option>
+<option>Faculty: Bioscience</option>
+<option>All Faculties</option>
+</select>
+<select class="h-10 px-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs">
+<option>Status: Live / Dispatched</option>
+<option>Status: Scheduled</option>
+<option>Status: Permanent Pin</option>
+<option>Status: Drafts</option>
+</select>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-all hover:shadow-md">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-xs text-label-xs flex items-center gap-1 uppercase tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+              Active High-Priority Banner
+            </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">REF: UNIZIK/CSC/24/EM-04</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">· Dispatched 15m ago</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-outlined material-symbols-outlined text-[16px]">visibility</span>
+<span>Audit Receipts</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-error text-on-error hover:opacity-90 transition-opacity font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Deactivate Banner</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+            High-Priority Alert: CSC 202 CBT Mock Relocated to Digital Hall 1
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+            Due to maintenance in Faculty Hall B, the Computer Organization &amp; Architecture CBT Mock scheduled for 10:00 AM has been immediately shifted to Digital Library Hall 1, Main Campus. All 200L candidates must report with identity passes.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between flex-wrap gap-space-md bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>1,240 Deliveries Confirmed</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">devices</span>
+<span>Push / WhatsApp Relay Active</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Validated by Registry Ops</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-xs text-label-xs text-primary font-bold">KEY: #CRITICAL-202</span>
+</div>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-xs text-label-xs uppercase tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">public</span>
+              Live &amp; Pushed to WhatsApp (14 Groups)
+            </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">REF: UNIZIK/CSC/24/T2</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">· 2h ago</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors" title="Download Official PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors" title="View Logs">
+<span class="material-symbols-outlined text-[18px]">read_more</span>
+</button>
+<button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors" title="Settings">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+            First Semester 2024/2025 Revised Examination Timetable (Draft II)
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+            Faculty of Physical Sciences, Department of Computer Science. Enclosed are verified slot adjustments for GST 101, MTH 201, CSC 311, and CSC 421. All students are directed to print and verify conflicts before Friday noon.
+          </p>
+</div>
+<div class="mt-space-md flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-xl">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-xs text-label-xs font-bold">
+              KO
+            </div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface font-semibold">Dr. K. O. Okoye</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Head of Department</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-xl">
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-label-xs text-label-xs font-bold">
+              CB
+            </div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface font-semibold">Engr. C. B. Ike</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Exam Officer</span>
+</div>
+</div>
+<div class="ml-auto flex items-center gap-space-lg">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">visibility</span>
+<span><strong class="text-on-surface">3,420</strong> reads</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">sim_card_download</span>
+<span><strong class="text-on-surface">184</strong> PDF downloads</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-3 flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+<span>Broadcast Update</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+              Revoke / Edit Memo
+            </button>
+</div>
+<button class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span>View Webhook Distribution Log</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-xs text-label-xs uppercase tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+              Scheduled (Live in 2 days)
+            </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">REF: UNIZIK/NACOSS/24/09</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">· Nov 14, 08:00 AM</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Queue Locked</span>
+<button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+            NACOSS Tech Week 2024 - Hackathon Registration Guidelines &amp; Team Caps
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+            Registration portal opens for team tracks (Web3, AI Automation, Hardware IoT). Mentorship allocation details and Grand Finale prize structures announced by the executive departmental council.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Target Audience: <strong class="text-on-surface font-label-sm text-label-sm">All Computer Science Undergraduates</strong></span>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm">Faculty Verified</span>
+</div>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-xs text-label-xs uppercase tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">push_pin</span>
+              Permanent Registry Pin
+            </span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">REF: UNIZIK/REG/SEN/891</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">· Enacted 2024/2025</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-xs text-label-xs font-bold">STATUTE ENFORCED</span>
+</div>
+</div>
+<div class="mt-space-md">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+            Senate Circular on Examination Misconduct &amp; Statute 14 Disciplinary Sanctions
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+            Official warning issued under the authority of the University Senate. Unauthorized electronic apparatuses, programmable calculators, or smartwatch accessories within hall perimeters constitute gross misconduct resulting in expulsion.
+          </p>
+</div>
+<div class="mt-space-md pt-3 flex items-center justify-between border-t-0 bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance</span>
+<span class="font-label-sm text-label-sm text-primary">Office of the University Registrar (Awka Campus)</span>
+</div>
+<button class="px-3 py-1 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-surface-container transition-colors">
+            View Gazette Code
+          </button>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_document</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Quick Compose &amp; Syndicate</h3>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-bold uppercase tracking-wider bg-secondary-container px-2 py-0.5 rounded">DRAFT WIDGET</span>
+</div>
+<form class="flex flex-col gap-space-sm" id="composeForm" onsubmit="event.preventDefault();">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Dispatch Title</label>
+<input class="w-full h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="e.g. Rescheduled Lab Practical CSC 313" type="text" value="MTH 201 Mid-Semester Quiz Venue"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Classification</label>
+<select class="w-full h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Urgent Broadcast</option>
+<option>General Bulletin</option>
+<option>Exam Protocol</option>
+<option>Department Memo</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Target Cohort</label>
+<select class="w-full h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>200L Computer Science</option>
+<option>All Faculty Students</option>
+<option>Final Year Undergrads</option>
+<option>Postgraduate Cohorts</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Circular Content Body</label>
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none resize-none" placeholder="Provide full circular instructions with dates and authorities..." rows="3">Kindly take note that due to accreditation ongoing at Hall A, Quiz 1 will hold at New Pharmacy Hall by 11:30 AM prompt.</textarea>
+</div>
+<div class="pt-1">
+<span class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Automated Relay Channels</span>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">smartphone</span>
+<span class="font-label-sm text-label-sm text-on-surface">Campus Core Portal Banner (In-App)</span>
+</div>
+</label>
+<label class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">forum</span>
+<span class="font-label-sm text-label-sm text-on-surface">Class Reps WhatsApp Syndication Relay</span>
+</div>
+</label>
+<label class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">mail</span>
+<span class="font-label-sm text-label-sm text-on-surface">Official Student Webmail Dispatch</span>
+</div>
+</label>
+</div>
+</div>
+<div class="mt-2 pt-space-sm flex flex-col gap-2">
+<button class="w-full py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-md hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Authorize &amp; Launch Dispatch</span>
+</button>
+<button class="w-full py-2 rounded-xl bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+              Save Draft to Department Vault
+            </button>
+</div>
+</form>
+</div>
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Watermark Registry Preview</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-inner">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none rotate-[-25deg]">
+<span class="font-display-lg text-display-lg text-primary tracking-widest text-[42px] font-bold">UNIZIK DISPATCH</span>
+</div>
+<div class="relative flex items-center gap-space-sm pb-space-sm mb-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold truncate">Nnamdi Azikiwe University</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant truncate">Registry Division · Directorate of Information</span>
+</div>
+</div>
+<div class="space-y-1 text-on-surface">
+<p class="font-label-sm text-label-sm font-bold text-primary">MEMORANDUM CIRCULAR PREVIEW</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Official notices generated via this hub are sealed with SHA-256 HMAC tokens. QR verification seals are rendered automatically on physical bulletin printouts.
+            </p>
+</div>
+<div class="mt-space-md pt-2 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">Valid Departmental Seal</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-mono">HASH: 8F2A...BC19</span>
+</div>
+</div>
+</div>
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm">
+<h4 class="font-label-md text-label-md text-primary mb-space-sm">Active Relay Infrastructure</h4>
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">WhatsApp Webhook Daemon</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Active (12ms)</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Firebase Cloud Messaging</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Active (28ms)</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Institutional SMTP Gateway</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Active (104ms)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm hidden items-center justify-center p-4" id="composeModal">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden flex flex-col max-h-[921px]">
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">post_add</span>
+<span class="font-headline-md text-headline-md text-primary">Compose Official University Memo</span>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant" id="closeComposeBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-xl overflow-y-auto flex flex-col gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Official Reference Code</label>
+<input class="w-full h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" type="text" value="UNIZIK/DCS/2024/CIR-088"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Subject Header</label>
+<input class="w-full h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="State subject with clarity..." type="text" value="Commencement of Continuous Assessment Tests (Harmattan 2024)"/>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Issuing Authority</label>
+<input class="w-full h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" type="text" value="Prof. C. E. Madueke (Dean)"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Broadcasting Level</label>
+<select class="w-full h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option>Faculty-Wide Bulletin</option>
+<option>Campus Core Top Emergency Alert</option>
+<option>Specific Level Only</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Official Dispatch Narrative</label>
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none resize-none" rows="5">Notice is hereby given that the first continuous assessment cycle for the 2024/2025 Harmattan Semester commences on Monday, December 2nd. Course coordinators are required to submit hall seating allocations to the departmental board before Thursday 5PM.</textarea>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Attach Crypto Seal #NAU-MOD-OKOYE</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Validated Moderator Key active in this session</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-xs text-label-xs font-bold">KEY READY</span>
+</div>
+</div>
+<div class="p-space-lg bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" id="cancelModalBtn">
+          Discard Draft
+        </button>
+<button class="px-5 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-md hover:bg-primary-container transition-colors flex items-center gap-1.5" id="submitModalBtn">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Publish &amp; Syndicate Immediately</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    const openComposeBtn = document.getElementById('openComposeBtn');
+    const closeComposeBtn = document.getElementById('closeComposeBtn');
+    const cancelModalBtn = document.getElementById('cancelModalBtn');
+    const submitModalBtn = document.getElementById('submitModalBtn');
+    const composeModal = document.getElementById('composeModal');
+
+    function toggleModal(show) {
+      if (show) {
+        composeModal.classList.remove('hidden');
+        composeModal.classList.add('flex');
+      } else {
+        composeModal.classList.add('hidden');
+        composeModal.classList.remove('flex');
+      }
+    }
+
+    if (openComposeBtn) openComposeBtn.addEventListener('click', () => toggleModal(true));
+    if (closeComposeBtn) closeComposeBtn.addEventListener('click', () => toggleModal(false));
+    if (cancelModalBtn) cancelModalBtn.addEventListener('click', () => toggleModal(false));
+    if (submitModalBtn) {
+      submitModalBtn.addEventListener('click', () => {
+        alert('Official Circular published and queued across 14 WhatsApp webhooks!');
+        toggleModal(false);
+      });
+    }
+
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+        tab.classList.remove('text-on-surface-variant');
+      });
+    });
+
+    const searchInput = document.getElementById('circularSearch');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const cards = document.querySelectorAll('.xl\\:col-span-8 > div');
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          if (text.includes(query)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+</div></main></div></body></html>

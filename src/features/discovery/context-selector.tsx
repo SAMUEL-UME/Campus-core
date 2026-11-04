@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { demoTaxonomy } from "@/data/demo-taxonomy";
+import { academicTaxonomy } from "@/data/academic-taxonomy";
 import { changeContext, type AcademicContext, type Section } from "./context";
 
 export function ContextSelector({
@@ -16,13 +16,13 @@ export function ContextSelector({
     {
       key: "university",
       label: "University",
-      options: demoTaxonomy.universities,
+      options: academicTaxonomy.universities,
       disabled: false,
     },
     {
       key: "faculty",
       label: "Faculty",
-      options: demoTaxonomy.faculties.filter(
+      options: academicTaxonomy.faculties.filter(
         (item) => item.universityId === draft.university,
       ),
       disabled: !draft.university,
@@ -30,7 +30,7 @@ export function ContextSelector({
     {
       key: "department",
       label: "Department",
-      options: demoTaxonomy.departments.filter(
+      options: academicTaxonomy.departments.filter(
         (item) => item.facultyId === draft.faculty,
       ),
       disabled: !draft.faculty,
@@ -38,18 +38,17 @@ export function ContextSelector({
     {
       key: "level",
       label: "Academic level",
-      options: demoTaxonomy.levels.filter(
+      options: academicTaxonomy.levels.filter(
         (item) => item.departmentId === draft.department,
       ),
       disabled: !draft.department,
     },
   ] as const;
+  const department = academicTaxonomy.departments.find(
+    (item) => item.id === draft.department && item.facultyId === draft.faculty,
+  );
   return (
-    <form
-      action={section === "dashboard" ? "/" : `/${section}`}
-      method="get"
-      className="space-y-4"
-    >
+    <form action={`/${section}`} method="get" className="space-y-4">
       <fieldset className="grid gap-4 sm:grid-cols-2">
         <legend className="mb-4 text-lg font-semibold">
           Choose your academic context
@@ -83,6 +82,13 @@ export function ContextSelector({
           </div>
         ))}
       </fieldset>
+      <div aria-live="polite" className="text-sm text-muted-foreground">
+        {department?.verificationNotes && (
+          <p>
+            <strong>Verification note:</strong> {department.verificationNotes}
+          </p>
+        )}
+      </div>
       <p className="text-sm text-muted-foreground">
         Changing a parent choice resets dependent choices. Apply your selection
         to update the page and navigation.

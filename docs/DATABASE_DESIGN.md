@@ -1,5 +1,7 @@
 # Campus Core — Database Design
 
+CC-102 reference-data update (not a migration): the owner-supplied TypeScript directory retains stable faculty/department IDs, faculty slugs scoped to university and department slugs scoped to faculty. Levels are department-specific. Discovery URLs use IDs, not proposed public slug routes. This does not approve or implement the proposed database constraints below; reconcile any wider slug-uniqueness proposal before backend approval. Verification notes remain source data and are displayed in discovery. See [CC-102 evidence](development/STUDENT_EXPERIENCE_VERIFICATION.md).
+
 **Version:** 0.2 | **Status:** Refined logical proposal awaiting architecture approval; no migrations | **Owner:** Samuel
 
 ## 1. Design rules

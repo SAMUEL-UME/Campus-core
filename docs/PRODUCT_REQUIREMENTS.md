@@ -3,6 +3,8 @@
 **Version:** 0.2 | **Date:** 2026-11-03 | **Status:** Core direction accepted; detailed architecture pending | **Owner:** Adimchi (Product), Samuel (final approval)
 
 ## 1. Product vision
+CC-102 discovery reference update: the owner supplied `src/data/unizik-academic-taxonomy.ts` for all 14 faculties and department-specific levels. Preserve exact supplied names/mappings and verification notes; this is not independently verified official university information. Implementation and outstanding browser review are recorded in [CC-102 evidence](development/STUDENT_EXPERIENCE_VERIFICATION.md).
+
 Campus Core is a mobile-first university information platform that helps students find relevant departmental announcements, academic resources, and events in one place. The first pilot is Nnamdi Azikiwe University (UNIZIK); the architecture should accommodate other universities later. The BUILDUP UNIZIK hackathon is the first delivery milestone, not the product's endpoint.
 
 ## 2. Problem and hypotheses

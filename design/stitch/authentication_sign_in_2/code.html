@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#0b1c30", "inverse-on-surface": "#eaf1ff", "on-primary-fixed-variant": "#314863", "inverse-primary": "#b0c9e8", "tertiary-fixed-dim": "#93ccff", "error": "#ba1a1a", "on-secondary-container": "#007230", "outline-variant": "#c3c6ce", "surface-dim": "#cbdbf5", "surface-container-low": "#eff4ff", "surface-container-lowest": "#ffffff", "on-surface": "#0b1c30", "secondary-container": "#7cf994", "on-tertiary-container": "#2f96db", "surface-tint": "#49607c", "secondary-fixed": "#7ffc97", "surface-variant": "#d3e4fe", "on-tertiary-fixed": "#001d31", "on-error": "#ffffff", "on-tertiary": "#ffffff", "tertiary-container": "#002b45", "on-secondary": "#ffffff", "inverse-surface": "#213145", "background": "#f8f9ff", "on-primary": "#ffffff", "error-container": "#ffdad6", "surface-container-high": "#dce9ff", "on-error-container": "#93000a", "surface-container": "#e5eeff", "surface-bright": "#f8f9ff", "primary-fixed-dim": "#b0c9e8", "surface": "#f8f9ff", "on-surface-variant": "#43474d", "primary-container": "#102a43", "tertiary-fixed": "#cce5ff", "on-secondary-fixed": "#002109", "primary": "#00152a", "outline": "#74777e", "on-secondary-fixed-variant": "#005320", "primary-fixed": "#d1e4ff", "on-tertiary-fixed-variant": "#004b73", "tertiary": "#001626", "secondary": "#006e2d", "surface-container-highest": "#d3e4fe", "on-primary-fixed": "#011d35", "secondary-fixed-dim": "#62df7d", "on-primary-container": "#7a92b0" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "gutter": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "space-sm": "0.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "space-xl": "1.5rem", "margin-mobile": "1rem" }, fontFamily: { "body-sm": ["Inter"], "body-lg": ["Inter"], "label-xs": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "display-lg": ["Inter"] }, fontSize: { "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-xs": ["10px", { "lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.03em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;background-color:#f8f9ff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><div class="flex flex-col"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Campus Core</span><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Portal Authentication</h1></div></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full pb-margin">
+<div class="px-gutter-mobile pt-space-md flex flex-col gap-space-lg">
+<!-- Hero / Emblem & Context Framing -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-1 bg-surface-container-high rounded-full">
+<span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-xs text-label-xs text-on-surface uppercase tracking-wider">Student Portal Access</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight">Welcome back, Scholar</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+          Sign in with your matriculation number or institutional email to access your personalized vault and sync offline resources.
+        </p>
+</div>
+</div>
+<!-- Segmented Mode Control -->
+<div class="w-full bg-surface-container rounded-xl p-1 flex items-center justify-between shadow-sm" role="tablist">
+<button aria-selected="true" class="flex-1 py-2 rounded-lg font-label-md text-label-md transition-all text-center bg-surface-container-lowest text-primary-container shadow-sm font-semibold" id="tab-signin" onclick="switchAuthTab('signin')" role="tab" type="button">
+        Sign In
+      </button>
+<button aria-selected="false" class="flex-1 py-2 rounded-lg font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" id="tab-create" onclick="switchAuthTab('create')" role="tab" type="button">
+        Create Account
+      </button>
+<button aria-selected="false" class="flex-1 py-2 rounded-lg font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" id="tab-forgot" onclick="switchAuthTab('forgot')" role="tab" type="button">
+        Forgot Key
+      </button>
+</div>
+<!-- Dynamic Mode Banner for Delight / Contextual Guidance -->
+<div class="flex items-center gap-space-sm px-space-md py-2.5 bg-secondary-container/20 rounded-xl transition-all" id="status-chip">
+<span class="material-symbols-outlined text-[18px] text-secondary">wifi_protected_setup</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container">Offline sync enabled • Session persists for 30 academic days</span>
+</div>
+<!-- Sign In Panel Container -->
+<div class="flex flex-col gap-space-lg" id="signin-view">
+<form class="flex flex-col gap-space-md" id="auth-form" onsubmit="handleAuthSubmit(event)">
+<!-- Input 1: Identity / Matriculation -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="student-identifier">
+<span>Matriculation No. or Student Email</span>
+<span class="font-label-xs text-label-xs text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">school</span> UNIZIK Core
+            </span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[20px] text-on-surface-variant pointer-events-none">badge</span>
+<input autocomplete="username" class="w-full h-12 pl-10 pr-4 bg-surface-container-lowest text-on-surface rounded-xl font-body-md text-body-md placeholder:text-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="student-identifier" placeholder="e.g. 2022/244892 or s.okafor@stu.unizik.edu.ng" required="" type="text"/>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant px-1">Found on your UNIZIK biometric portal slip</span>
+</div>
+<!-- Input 2: Portal Secret -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="portal-password">Portal Password</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[20px] text-on-surface-variant pointer-events-none">lock</span>
+<input autocomplete="current-password" class="w-full h-12 pl-10 pr-11 bg-surface-container-lowest text-on-surface rounded-xl font-body-md text-body-md placeholder:text-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="portal-password" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 w-7 h-7 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" id="toggle-pwd-btn" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="pwd-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember & Recover Utility -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary-container bg-surface-container-lowest accent-primary-container cursor-pointer" id="remember-device" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Remember this device</span>
+</label>
+<button class="font-label-sm text-label-sm text-primary-container hover:underline font-semibold" onclick="switchAuthTab('forgot')" type="button">
+            Forgot password?
+          </button>
+</div>
+<!-- Primary Submission Action -->
+<button class="w-full h-12 mt-space-sm bg-primary-container text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-md active:bg-primary transition-all" id="submit-cta" type="submit">
+<span id="cta-label">Sign In to Campus Core</span>
+<span class="material-symbols-outlined text-[18px]" id="cta-icon">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Mode Secondary/Notice Views (Hidden by default for tab switching) -->
+<div class="hidden flex-col gap-space-md p-space-md bg-surface-container-low rounded-xl" id="create-view">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span class="font-headline-sm text-headline-sm">Instant Student Activation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Admitted scholars can establish their offline biometric terminal profile in less than 30 seconds with their matriculation serial.
+      </p>
+<div class="flex flex-col gap-space-xs">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant">app_registration</span>
+<input class="w-full h-11 pl-10 pr-3 bg-surface-container-lowest text-on-surface rounded-xl font-body-sm text-body-sm focus:outline-none" placeholder="Enter Registration/Matric ID" type="text"/>
+</div>
+</div>
+<button class="w-full h-11 bg-secondary text-on-secondary rounded-xl font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm" type="button">
+<span>Verify &amp; Provision Profile</span>
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</button>
+</div>
+<div class="hidden flex-col gap-space-md p-space-md bg-surface-container-low rounded-xl" id="forgot-view">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">lock_reset</span>
+<span class="font-headline-sm text-headline-sm">Access Recovery</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Provide your institutional mailbox. We will transmit an authoritative biometric one-time login token to your UNIZIK domain inbox.
+      </p>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant">mail</span>
+<input class="w-full h-11 pl-10 pr-3 bg-surface-container-lowest text-on-surface rounded-xl font-body-sm text-body-sm focus:outline-none" placeholder="s.student@stu.unizik.edu.ng" type="email"/>
+</div>
+<button class="w-full h-11 bg-primary-container text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm" type="button">
+<span>Dispatch Reset Token</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+<!-- Institutional Single Sign-On / Guest Access Area -->
+<div class="flex flex-col gap-space-md">
+<div class="relative flex py-1 items-center">
+<div class="flex-grow bg-surface-container h-px"></div>
+<span class="flex-shrink mx-3 font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">or authenticate via</span>
+<div class="flex-grow bg-surface-container h-px"></div>
+</div>
+<!-- UNIZIK SSO Unified Button -->
+<button class="w-full h-12 bg-surface-container-lowest text-on-surface rounded-xl font-label-md text-label-md flex items-center justify-between px-space-md shadow-sm active:bg-surface-container transition-colors" onclick="simulateSSO()" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+</div>
+<span class="font-semibold text-primary-container">Login with UNIZIK Biometric Portal</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">open_in_new</span>
+</button>
+<!-- Guest Preview Mode link -->
+<div class="text-center pt-1">
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors inline-flex items-center gap-1 underline underline-offset-4" onclick="guestModeNotice()" type="button">
+<span>Continue as Guest</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant/80">(Explore public bulletins without signing in)</span>
+</button>
+</div>
+</div>
+<!-- Security & Institutional Trust Card -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-container/30 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">256-Bit SSL Encrypted Student Identity Verification</span>
+<p class="font-label-xs text-label-xs text-on-surface-variant leading-relaxed">
+          Campus Core protects your academic records and grade caches. We do not store or mirror your UNIZIK portal master credentials locally.
+        </p>
+</div>
+</div>
+<!-- Quick Registration Teaser -->
+<div class="flex items-center justify-between p-space-md bg-surface-container rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">New student at UNIZIK?</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Create account in 30 seconds with your Reg Number.</span>
+</div>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary rounded-lg font-label-xs text-label-xs uppercase tracking-wider font-semibold active:scale-95 transition-transform" onclick="switchAuthTab('create')" type="button">
+        Get Started
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function togglePasswordVisibility() {
+    const pwdInput = document.getElementById('portal-password');
+    const pwdIcon = document.getElementById('pwd-icon');
+    if (!pwdInput || !pwdIcon) return;
+    
+    if (pwdInput.type === 'password') {
+      pwdInput.type = 'text';
+      pwdIcon.textContent = 'visibility_off';
+    } else {
+      pwdInput.type = 'password';
+      pwdIcon.textContent = 'visibility';
+    }
+  }
+
+  function switchAuthTab(tab) {
+    const tabs = ['signin', 'create', 'forgot'];
+    const views = {
+      signin: document.getElementById('signin-view'),
+      create: document.getElementById('create-view'),
+      forgot: document.getElementById('forgot-view')
+    };
+    const chips = {
+      signin: 'Offline sync enabled • Session persists for 30 academic days',
+      create: 'Instant identity provisioning • Real-time registry sync',
+      forgot: 'Secured recovery route • UNIZIK student email dispatch'
+    };
+
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      const view = views[t];
+      if (t === tab) {
+        btn.classList.add('bg-surface-container-lowest', 'text-primary-container', 'shadow-sm', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant');
+        btn.setAttribute('aria-selected', 'true');
+        if (view) view.classList.remove('hidden');
+      } else {
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary-container', 'shadow-sm', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+        btn.setAttribute('aria-selected', 'false');
+        if (view) view.classList.add('hidden');
+      }
+    });
+
+    const statusChip = document.getElementById('status-chip');
+    if (statusChip) {
+      statusChip.querySelector('span:last-child').textContent = chips[tab] || '';
+    }
+  }
+
+  function handleAuthSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-cta');
+    const label = document.getElementById('cta-label');
+    const icon = document.getElementById('cta-icon');
+
+    if (!btn || !label || !icon) return;
+
+    // Academic auth delightful micro-interaction
+    btn.disabled = true;
+    label.textContent = "Validating UNIZIK Records...";
+    icon.textContent = "sync";
+    icon.classList.add('animate-spin');
+
+    setTimeout(() => {
+      label.textContent = "Identity Authenticated";
+      icon.classList.remove('animate-spin');
+      icon.textContent = "check_circle";
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-secondary');
+
+      setTimeout(() => {
+        btn.disabled = false;
+        label.textContent = "Sign In to Campus Core";
+        icon.textContent = "arrow_forward";
+        btn.classList.remove('bg-secondary');
+        btn.classList.add('bg-primary-container');
+      }, 2000);
+    }, 1200);
+  }
+
+  function simulateSSO() {
+    const statusChip = document.getElementById('status-chip');
+    if (statusChip) {
+      statusChip.querySelector('span:last-child').textContent = 'Handshaking with UNIZIK Central Biometric Gateway...';
+      setTimeout(() => {
+        statusChip.querySelector('span:last-child').textContent = 'SSO handshake ready. Redirecting safely...';
+      }, 1000);
+    }
+  }
+
+  function guestModeNotice() {
+    const statusChip = document.getElementById('status-chip');
+    if (statusChip) {
+      statusChip.querySelector('span:last-child').textContent = 'Loaded Guest Sandbox: Public Senate Circulars only.';
+    }
+  }
+</script></main></body></html>

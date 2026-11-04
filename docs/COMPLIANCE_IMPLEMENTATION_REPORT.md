@@ -42,7 +42,13 @@ November 3 scope update: November 6 demo targets read-only fictional data across
 **Do not claim compliance or production readiness yet.** Complete implementation, execute `COMPLIANCE_AUDIT.md`, resolve critical/high findings, and obtain appropriate legal/institutional review where needed.
 
 ## 7. Update procedure
+CC-102 directory evidence update: supplied mappings and verification notes preserved, visible unverified-directory disclosure and noindex retained, 118 unit tests and 1,532 production HTTP combinations passed. This establishes reference-data/context behavior only, not official academic accuracy, authorization, accessibility certification or production readiness. See [CC-102 evidence](development/STUDENT_EXPERIENCE_VERIFICATION.md); browser review remains open.
+
 After each release candidate, replace baseline statuses with observed results; document exact versions, evidence, unresolved risks, owners, and approval. Never claim a check passed without running it.
 
 ## November 3 foundation evidence update
 Frontend root now renders an independent-project disclosure and noindex metadata. HTTP dev/production smoke verified markup and CSS; no visual/accessibility certification. Four utility tests and lint/typecheck/build pass. Authentication/RLS remain absent. Full npm audit reports 17 moderate tooling findings; production-only audit zero. Earlier table is pre-implementation baseline, superseded for foundation scope only by [verification evidence](development/FOUNDATION_VERIFICATION.md). No production-readiness claim.
+
+
+## Final release QA — November 4
+Existing checks and production build passed (125 tests); production browser journeys and critical keyboard controls passed at 320/390/1280px. Loading and error/retry exercised separately in disposable copies, without release fault hooks. Audit: 17 moderate dev-tool findings, zero production findings, no upgrades. No required environment variables. GO for owner-approved demo deployment, not a verified deployed release. Remaining limits and exact approval-gated handoff: [release checklist](development/DEMO_RELEASE.md). No push/deployment performed.

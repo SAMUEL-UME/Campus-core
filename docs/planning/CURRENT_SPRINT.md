@@ -2,7 +2,7 @@
 
 Owner: Samuel. Deadline November 6; exact submission time/timezone unverified. Engineering availability 15–25 hours/week; actual hours remaining are not confirmed. CC-101 accepted/completed. CC-102 context selection/shared dashboard implemented, In Review pending browser verification; content categories/backend not implemented.
 
-CC-102 handoff resolved by owner's minimal-design and provisional three-department approval, superseding earlier blockers below. Next gate: execute manual browser/mobile checklist in [CC-102 evidence](../development/STUDENT_EXPERIENCE_VERIFICATION.md), then CC-103. Real taxonomy/content permissions remain unverified.
+CC-102 now uses the owner-supplied 14-faculty / 86-department reference dataset, superseding the provisional three-department implementation. Exact mappings, levels and verification notes are preserved; independent academic verification/content permissions remain outstanding. Automated evidence: 118 tests and 1,532 production HTTP combinations pass. Next gate: execute manual browser/mobile checklist in [CC-102 evidence](../development/STUDENT_EXPERIENCE_VERIFICATION.md), then CC-103. Earlier sprint planning below is retained as history.
 
 ## Sprint 0: November 3 only
 Cap foundation planning/review at approximately 60–90 minutes of engineering time (proposed budget, not recorded time). Resolve frontend setup approval, design handoff, demo taxonomy and official cutoff. Unresolved backend decisions move to P1, not an indefinite foundation phase. See [task board](TASK_BOARD.md) for all statuses and acceptance criteria.
@@ -21,3 +21,10 @@ Start checks as each task lands, not only November 5. Design references have not
 
 ## Sprint acceptance
 Every P0 student journey works across at least two departments; invalid context, missing record and empty states tested; error/loading states exercised; fictional labels remain visible on details and listings; no auth/write/service features; automated checks and manual accessibility evidence recorded; release restrictions stated honestly. No P1 security claims based on fixture filtering.
+
+## November 4 — Option A execution update
+Owner approved the read-only fictional-data MVP and deferred all Supabase/auth/publishing work. Landing, dashboard, all three content listings/details, filtering and mobile navigation are implemented. Local production build and 125 tests pass; isolated Chrome journeys at 320/390/1280px passed, including history/refresh and context preservation. CC-102 remains In Review for loading/error retry and fuller accessibility review, not blocked on backend work. No deployment/push performed. See [release evidence and remaining gates](../development/DEMO_RELEASE.md).
+
+
+## Final release QA — November 4
+Existing checks and production build passed (125 tests); production browser journeys and critical keyboard controls passed at 320/390/1280px. Loading and error/retry exercised separately in disposable copies, without release fault hooks. Audit: 17 moderate dev-tool findings, zero production findings, no upgrades. No required environment variables. GO for owner-approved demo deployment, not a verified deployed release. Remaining limits and exact approval-gated handoff: [release checklist](../development/DEMO_RELEASE.md). No push/deployment performed.

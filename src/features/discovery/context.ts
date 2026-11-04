@@ -1,4 +1,4 @@
-import { demoTaxonomy, type Taxonomy } from "../../data/demo-taxonomy";
+import { academicTaxonomy, type Taxonomy } from "../../data/academic-taxonomy";
 
 export type AcademicContext = {
   university: string;
@@ -41,7 +41,7 @@ export function isSection(value: string): value is Section {
 }
 export function resolveContext(
   query: Query,
-  taxonomy: Taxonomy = demoTaxonomy,
+  taxonomy: Taxonomy = academicTaxonomy,
 ) {
   const context = { ...emptyContext };
   const keys = Object.keys(context) as (keyof AcademicContext)[];
@@ -112,6 +112,6 @@ export function sectionHref(
   const query = new URLSearchParams();
   for (const [key, value] of Object.entries(context))
     if (value) query.set(key, value);
-  const path = section === "dashboard" ? "/" : `/${section}`;
+  const path = `/${section}`;
   return query.size ? `${path}?${query.toString()}` : path;
 }
