@@ -17,4 +17,9 @@ test-results/
 !.env.example
 !.env.*.example
 *.pem
-*.key
+*.key# Firebase emulator output and local CLI state
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+database-debug.log

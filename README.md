@@ -35,3 +35,6 @@ No environment file is required. `.env.example` documents the optional future pu
 Checks: `npm run lint`, `npm run typecheck`, `npm run test`, `npm run format:check`, `npm run build`. Production preview: `npm run start -- --hostname 127.0.0.1` after build. Formatting targets source/config only, preserving supplied documentation.
 
 Verification: four unit tests passed, lint clean, types/format/build passed, dev and production HTTP/CSS/noindex smoke checks passed. Browser/mobile/keyboard testing remains outstanding. Full npm audit reports 17 moderate development-tool findings; production-only audit reports zero. ESLint 9 is deprecated but matches current Next lint-plugin peer constraints; track remediation before release. See [foundation evidence](docs/development/FOUNDATION_VERIFICATION.md).
+
+## November 4 — rebuild in progress
+The owner restored the full Campus Core product direction and requested a substantial UI redesign plus Firebase and Gemini. Earlier demo-only scope below is historical. Initial local UI changes are unverified until dependency installation, checks and browser review complete. Backend, authentication, publishing and AI remain unimplemented. Current design direction: [ui.md](docs/design/ui.md). Service setup: [Firebase setup](docs/development/FIREBASE_SETUP.md).

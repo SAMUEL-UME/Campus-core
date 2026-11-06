@@ -20,9 +20,13 @@ export function ContentCard({
   context: AcademicContext;
 }) {
   return (
-    <article className="rounded-lg border border-border bg-card p-5">
+    <article
+      className={`content-card content-card-${item.kind} rounded-lg border border-border bg-card p-5`}
+    >
       <div className="mb-3 flex flex-wrap gap-2 text-xs font-semibold">
-        <span className="rounded bg-muted px-2 py-1">Fictional demo</span>
+        {item.isDemo !== false && (
+          <span className="rounded bg-muted px-2 py-1">Fictional demo</span>
+        )}
         <span className="px-2 py-1">{item.category}</span>
         {item.event && <span className="px-2 py-1">{item.event.status}</span>}
       </div>
@@ -40,7 +44,7 @@ export function ContentCard({
       <p className="mt-3 text-xs text-muted-foreground">
         {item.event
           ? formatDate(item.event.startsAt)
-          : `Published ${formatDate(item.publishedAt)}`}
+          : `${item.isDemo === false ? "Updated" : "Published"} ${formatDate(item.publishedAt)}`}
       </p>
     </article>
   );
@@ -51,13 +55,15 @@ export function ContentView({
   context,
   query,
   detailId,
+  records,
 }: {
   kind: ContentKind;
   context: AcademicContext;
   query: Query;
   detailId?: string;
+  records?: readonly DemoRecord[];
 }) {
-  const all = scopedRecords(kind, context);
+  const all = scopedRecords(kind, context, records);
   if (detailId) {
     const item = all.find((record) => record.id === detailId);
     if (!item)
@@ -79,7 +85,7 @@ export function ContentView({
         </section>
       );
     return (
-      <article className="space-y-5 rounded-lg border border-border bg-card p-5 sm:p-7">
+      <article className="detail-card space-y-5 rounded-lg border border-border bg-card p-5 sm:p-7">
         <Link
           className="inline-flex min-h-11 items-center underline"
           href={sectionHref(kind, context)}
@@ -87,13 +93,15 @@ export function ContentView({
           ← Back to {kind}
         </Link>
         <p className="text-sm font-semibold text-accent">
-          Fictional demonstration · {item.category}
+          {item.isDemo !== false ? "Fictional demonstration · " : ""}
+          {item.category}
         </p>
         <h2 className="text-2xl font-bold">{item.title}</h2>
         <p className="text-sm text-muted-foreground">
           Source: {item.source}
           <br />
-          Published {formatDate(item.publishedAt)} ·{" "}
+          {item.isDemo === false ? "Updated" : "Published"}{" "}
+          {formatDate(item.publishedAt)} ·{" "}
           {item.levels.length
             ? `${item.levels.join(", ")} level`
             : "All levels in this department"}
@@ -102,7 +110,12 @@ export function ContentView({
           <dl className="grid gap-3 rounded-md bg-muted p-4 text-sm">
             <div>
               <dt className="font-semibold">Status</dt>
-              <dd>{item.event.status} — fictional event, do not attend</dd>
+              <dd>
+                {item.event.status}
+                {item.isDemo !== false
+                  ? " — fictional event, do not attend"
+                  : ""}
+              </dd>
             </div>
             <div>
               <dt className="font-semibold">When</dt>
@@ -121,6 +134,16 @@ export function ContentView({
             </div>
           </dl>
         )}
+        {item.resourceUrl && (
+          <a
+            href={item.resourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="welcome-button"
+          >
+            Open resource ↗
+          </a>
+        )}
         {item.body.map((paragraph) => (
           <p className="leading-7" key={paragraph}>
             {paragraph}
@@ -129,7 +152,7 @@ export function ContentView({
       </article>
     );
   }
-  const items = filterRecords(kind, context, query);
+  const items = filterRecords(kind, context, query, undefined, records);
   return (
     <section className="space-y-4" aria-label={`${kind} results`}>
       <form
@@ -200,8 +223,8 @@ export function ContentView({
         </div>
       </form>
       <p role="status" className="text-sm text-muted-foreground">
-        {items.length} {items.length === 1 ? "result" : "results"} · fictional
-        demonstration content
+        {items.length} {items.length === 1 ? "result" : "results"} · department
+        content
       </p>
       {items.length ? (
         items.map((item) => (
@@ -212,12 +235,12 @@ export function ContentView({
           <h2 className="text-lg font-semibold">
             {all.length
               ? "No matching results"
-              : `No demo ${kind} for this selection yet`}
+              : `No ${kind} for this selection yet`}
           </h2>
           <p className="mt-2 text-muted-foreground">
             {all.length
               ? "Try another keyword or clear the filters."
-              : "The full academic directory is available. Sample content currently covers Computer Science, Mathematics and Medicine; other departments intentionally remain empty."}
+              : "Choose another department or check back for new content."}
           </p>
         </div>
       )}

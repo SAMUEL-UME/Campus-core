@@ -1,0 +1,63 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function publisher(department) {
+      return request.auth != null && get(/databases/$(database)/documents/memberships/$(request.auth.uid)/departments/$(department)).data.active == true;
+    }
+    function text(value, max) { return value is string && value.size() > 0 && value.size() <= max; }
+    function validContent(d) {
+      return d.keys().hasOnly(['departmentId','kind','status','title','summary','body','category','source','levels','resourceUrl','startsAt','endsAt','venue','organizer','eventStatus','authorId','createdAt','updatedAt','updatedBy','auditId'])
+        && text(d.departmentId,200) && d.kind in ['announcements','resources','events']
+        && d.status in ['draft','published','archived']
+        && text(d.title,180) && text(d.summary,500) && text(d.body,20000) && text(d.category,80) && text(d.source,200)
+        && d.levels is list && d.levels.size() <= 12
+        && d.levels.hasOnly(get(/databases/$(database)/documents/memberships/$(request.auth.uid)/departments/$(d.departmentId)).data.allowedLevels)
+        && d.resourceUrl is string && d.resourceUrl.size() <= 2000 && (d.resourceUrl == '' || d.resourceUrl.matches('https://[^\\s]+'))
+        && d.startsAt is string && d.startsAt.size() <= 40 && d.endsAt is string && d.endsAt.size() <= 40
+        && d.venue is string && d.venue.size() <= 200 && d.organizer is string && d.organizer.size() <= 200
+        && d.eventStatus in ['Scheduled','Cancelled']
+        && d.createdAt is timestamp && d.updatedAt == request.time && d.updatedBy == request.auth.uid
+        && text(d.authorId,128) && text(d.auditId,100);
+    }
+    function auditMatches(d, id) {
+      let a = getAfter(/databases/$(database)/documents/publicationAudit/$(d.auditId)).data;
+      return a.contentId == id && a.departmentId == d.departmentId && a.actorId == request.auth.uid && a.status == d.status && a.occurredAt == request.time;
+    }
+    match /studentProfiles/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['university','faculty','department','level','updatedAt'])
+        && text(request.resource.data.university,100)
+        && text(request.resource.data.faculty,200)
+        && text(request.resource.data.department,200)
+        && text(request.resource.data.level,20)
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if false;
+    }
+    match /memberships/{uid}/departments/{department} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false; // Provision/revoke only through trusted owner administration.
+    }
+    match /content/{id} {
+      allow read: if resource.data.status == 'published' || publisher(resource.data.departmentId);
+      allow create: if publisher(request.resource.data.departmentId) && validContent(request.resource.data)
+        && request.resource.data.authorId == request.auth.uid && request.resource.data.createdAt == request.time && auditMatches(request.resource.data, id);
+      allow update: if publisher(resource.data.departmentId) && validContent(request.resource.data)
+        && request.resource.data.departmentId == resource.data.departmentId
+        && request.resource.data.authorId == resource.data.authorId && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.auditId != resource.data.auditId && auditMatches(request.resource.data,id);
+      allow delete: if false;
+    }
+    match /publicationAudit/{id} {
+      allow read, update, delete: if false;
+      allow create: if request.resource.data.keys().hasOnly(['contentId','departmentId','actorId','status','occurredAt'])
+        && publisher(request.resource.data.departmentId) && request.resource.data.actorId == request.auth.uid
+        && request.resource.data.occurredAt == request.time
+        && getAfter(/databases/$(database)/documents/content/$(request.resource.data.contentId)).data.auditId == id
+        && getAfter(/databases/$(database)/documents/content/$(request.resource.data.contentId)).data.departmentId == request.resource.data.departmentId
+        && getAfter(/databases/$(database)/documents/content/$(request.resource.data.contentId)).data.status == request.resource.data.status;
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}
+

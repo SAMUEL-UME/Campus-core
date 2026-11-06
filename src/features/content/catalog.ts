@@ -1,4 +1,8 @@
-import { demoContent, type ContentKind } from "../../data/demo-content";
+import {
+  demoContent,
+  type ContentKind,
+  type DemoRecord,
+} from "../../data/demo-content";
 import {
   resolveContext,
   sectionHref,
@@ -6,9 +10,13 @@ import {
   type Query,
 } from "../discovery/context";
 
-export function scopedRecords(kind: ContentKind, context: AcademicContext) {
+export function scopedRecords(
+  kind: ContentKind,
+  context: AcademicContext,
+  records: readonly DemoRecord[] = demoContent,
+) {
   if (!resolveContext(context).complete) return [];
-  return demoContent.filter(
+  return records.filter(
     (item) =>
       item.kind === kind &&
       item.departmentId === context.department &&
@@ -20,8 +28,9 @@ export function filterRecords(
   context: AcademicContext,
   query: Query,
   now = Date.now(),
+  source: readonly DemoRecord[] = demoContent,
 ) {
-  const records = scopedRecords(kind, context);
+  const records = scopedRecords(kind, context, source);
   const q = typeof query.q === "string" ? query.q.trim().slice(0, 100) : "";
   const category = typeof query.category === "string" ? query.category : "";
   const period = typeof query.period === "string" ? query.period : "";

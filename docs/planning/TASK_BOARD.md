@@ -1,5 +1,15 @@
 # Task board
 
+## November 5 rebuild update (supersedes the demo-only freeze below)
+
+| Task | Status | Evidence / remaining work |
+| --- | --- | --- |
+| Reference-informed UI rebuild | In Progress | Landing and student shell/cards updated; earlier local lint/types/125 tests/build passed on Node 26. Visual review of this rebuild remains unverified after browser tool timeouts. |
+| Firebase web setup and Google sign-in | In Progress | Owner supplied configuration; ignored local environment, SDK initializer and sign-in/sign-out screen added. Lint/types/125 existing tests/build passed. Google provider/domain activation and real login remain unverified. |
+| Firestore and scoped publishing | Backlog | No database connection, rules deployment or persistence verified. |
+| Gemini campus assistant | Blocked | Key setup pending; no AI endpoint implemented. |
+
+
 As of November 3, 2026. CC-101 accepted/completed; CC-102 implemented pending browser review. Assignments need team acknowledgment. Estimates are engineering effort, not promised remaining capacity. P0 plan totals approximately 10–15h; see sprint budget.
 
 | ID / task and description | Owner | Priority | Dependencies | Acceptance criteria | Status | Estimate / target |
@@ -28,3 +38,15 @@ Owner accepted CC-101 and authorized CC-102 with minimal design and provisional 
 | Follow-up ID | Owner | Priority | Dependencies | Acceptance | Status | Complexity |
 | --- | --- | --- | --- | --- | --- | --- |
 | CC-106 Tooling audit/support remediation | Samuel + AI | P0 before release review | Compatible tooling research | Resolve findings or document reviewed mitigation/acceptance; rerun lint/tests/build/audit | Ready | M |
+
+## November 5 — persistence implementation evidence
+Firestore/scoped publishing: **In Progress**. Local publisher editor, validated authenticated API, atomic content/audit writes, proposed database rules and configurable public reads exist. The owner has not created Firestore. Rules, permissions and persistence are not live-tested; write access stays disabled by default. Gemini key is now locally configured but untested; the assistant remains unimplemented. Acceptance still requires negative authorization tests and real publish/archive/revocation checks. See [setup and remaining gates](../development/FIREBASE_SETUP.md).
+
+## November 5 — student experience continuation
+The owner explicitly requested the supplied-reference UI, Google and email/password authentication, registration, password recovery, a student dashboard and a profile. These requests supersede historical demo-only and publisher-only authentication restrictions above. The ponytail skill is now required for subsequent implementation: reuse the installed stack and keep this pass focused on these journeys.
+
+Implemented locally: shared responsive student shell with five mobile destinations, department bulletin/resources/events dashboard, sign-in and sign-up forms, password-reset request flow, profile display-name editing, email-verification retry, sign-out and private academic-profile saving. Registration preserves the created account when optional name/email-verification setup fails. Profile edits remount when the account changes; draft academic changes are not automatically persisted.
+
+Cloud observations: existing default Firestore database confirmed (Standard, eur3); its existing time-limited rules expired September 7, 2022. Google and Email/Password providers are enabled. Authorized domains observed: localhost and the two default Firebase hosting domains. Vercel domain was absent. No console configuration was changed.
+
+Student profile storage uses studentProfiles/{uid}, a separate namespace from older users documents. Proposed rules restrict reads/writes to the account owner, reject extra role fields and bound field sizes. Local and cloud verification evidence is maintained in [Firebase setup](../development/FIREBASE_SETUP.md). This work remains In Progress until checks and service verification are recorded; no launch-readiness claim.

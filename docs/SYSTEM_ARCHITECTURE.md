@@ -84,3 +84,10 @@ November 3 update: read-only P0 scaffolding may begin after explicit approval of
 
 ## 12. Hackathon P0 execution boundary
 One Next.js application with parameterized department routes and shared layouts. Typed demo records carry university/faculty/department/level relationships; small feature queries filter those records. No generic repository interface, database client, auth screen or mutation API is needed yet. Backend diagrams above describe P1/long-term architecture, not implemented P0 capabilities. Fake data must contain no confidential drafts or real student data; filtering bundled fixture records is a correctness check, not RLS/security isolation. Fictional pages are noindex and visibly labeled. Approve corresponding screen designs before product-screen work; foundation may use a neutral verification page, not a claimed final dashboard.
+
+## November 5 — current student account architecture
+This update supersedes earlier Supabase/publisher-only and no-student-account proposals. The owner explicitly requested Google and email/password student accounts, recovery and profiles. The installed implementation uses Firebase Authentication for identity and password/reset delivery. Public browsing remains available without sign-in.
+
+Academic preferences use studentProfiles/{uid}: university, faculty, department, level and updatedAt only. Firestore rules enforce owner-only access and deny additional privilege fields. Profile data does not grant publishing rights; membership approval remains a separate authority. Display name is stored in Firebase Authentication. The shared session provider observes Firebase identity. Browser-local academic selections are keyed per uid (or guest), validated with the existing taxonomy resolver, and do not establish authorization. No client role is trusted.
+
+New routes: /sign-in, /sign-up, /forgot-password, /profile and /privacy. Existing public sections use the shared adaptive student shell. /publisher retains separately checked department membership. These are local implementation details, not evidence that live rules or deployment are complete.

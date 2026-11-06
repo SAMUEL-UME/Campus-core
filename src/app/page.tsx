@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import {
-  type Query,
-  resolveContext,
-  sectionHref,
-} from "@/features/discovery/context";
+import { type Query, sectionHref } from "@/features/discovery/context";
 
 export default async function HomePage({
   searchParams,
@@ -33,83 +29,170 @@ export default async function HomePage({
     level: "200",
   };
   return (
-    <div className="mx-auto max-w-5xl px-5 py-6 sm:px-8">
-      <header className="flex items-center justify-between gap-4 border-b border-border pb-5">
-        <span className="text-xl font-bold">Campus Core</span>
-        <span className="rounded-md bg-muted px-3 py-2 text-xs font-semibold">
-          Independent student demo
-        </span>
+    <div className="welcome">
+      <header className="welcome-nav">
+        <Link href="/" className="wordmark">
+          <span className="brand-mark">C</span>Campus Core
+          <span className="brand-dot">.</span>
+        </Link>
+        <nav aria-label="Welcome navigation">
+          <Link href="/sign-in">Sign in</Link>
+          <Link href="/sign-up" className="welcome-button">
+            Create an account <span aria-hidden="true">↗</span>
+          </Link>
+        </nav>
       </header>
-      <main id="main-content" tabIndex={-1} className="py-12 sm:py-20">
-        <p className="mb-4 text-sm font-semibold text-accent">
-          UNIZIK academic discovery
-        </p>
-        <h1 className="max-w-2xl text-4xl leading-tight font-bold tracking-tight sm:text-5xl">
-          Your department.
-          <br />
-          Your study day.
-          <br />
-          One place to start.
-        </h1>
-        <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
-          Find announcements, study resources and events in your academic
-          context. No account needed.
-        </p>
-        <div className="my-8 flex flex-wrap gap-3">
-          <Link
-            href="/dashboard"
-            className="inline-flex min-h-12 items-center rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground"
+      <main id="main-content" tabIndex={-1}>
+        <section className="welcome-hero">
+          <div className="hero-copy">
+            <span className="eyebrow">
+              <span /> BUILT AROUND YOUR CAMPUS LIFE
+            </span>
+            <h1>
+              Less searching.
+              <br />
+              More <em>belonging.</em>
+            </h1>
+            <p>
+              Your department’s updates, study resources and what’s happening
+              next. Together in one place, wherever your day takes you.
+            </p>
+            <div className="hero-actions">
+              <Link href="/dashboard" className="welcome-button">
+                Find my department <span aria-hidden="true">→</span>
+              </Link>
+              <Link
+                href={sectionHref("dashboard", sample)}
+                className="text-link"
+              >
+                Take a look around ↗
+              </Link>
+            </div>
+            <p className="hero-note">
+              Starting with UNIZIK. Open to explore. No account needed.
+            </p>
+          </div>
+          <div
+            className="hero-preview"
+            aria-label="Preview of Campus Core sample content"
           >
-            Choose your department →
-          </Link>
-          <Link
-            href={sectionHref("dashboard", resolveContext(sample).context)}
-            className="inline-flex min-h-12 items-center rounded-md border border-border bg-card px-5 py-3 font-semibold"
-          >
-            Explore a sample
-          </Link>
-        </div>
-        <p className="max-w-2xl rounded-lg border border-border bg-muted p-4 text-sm leading-6">
-          <strong>
-            Fictional demonstration, not an official university service.
-          </strong>{" "}
-          All content examples are fictional. The owner-supplied directory
-          includes 14 faculties and 86 departments; academic mappings and level
-          ranges are not independently verified.
-        </p>
-        <section
-          aria-label="What you can explore"
-          className="mt-10 grid gap-4 sm:grid-cols-3"
-        >
+            <div className="preview-top">
+              <span className="mini-mark">C</span>
+              <span>YOUR CAMPUS SPACE</span>
+              <span className="preview-pill">Preview</span>
+            </div>
+            <div className="preview-body">
+              <p className="eyebrow">COMPUTER SCIENCE · 200 LEVEL</p>
+              <h2>A little more connected.</h2>
+              <p className="preview-subtitle">
+                Make room for what matters today.
+              </p>
+              <div className="preview-shortcuts">
+                <Link href={sectionHref("announcements", sample)}>
+                  <span>↗</span>Updates
+                </Link>
+                <Link href={sectionHref("resources", sample)}>
+                  <span>▤</span>Resources
+                </Link>
+                <Link href={sectionHref("events", sample)}>
+                  <span>▦</span>Events
+                </Link>
+              </div>
+              <Link
+                href={sectionHref("announcements", sample)}
+                className="preview-notice"
+              >
+                <span className="eyebrow">DEPARTMENT BULLETIN</span>
+                <h3>A new way to plan your study week</h3>
+                <p>
+                  Explore the sample notice and find a little inspiration for
+                  your next study session.
+                </p>
+                <span className="preview-read">Read the bulletin →</span>
+              </Link>
+              <div className="preview-bottom">
+                <span className="resource-symbol">▤</span>
+                <div>
+                  <strong>Your next study session, sorted.</strong>
+                  <p>Original study guides · Sample library</p>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+            <span className="preview-caption">
+              Fictional content shown for preview
+            </span>
+          </div>
+        </section>
+        <section className="welcome-explore" aria-labelledby="explore-title">
+          <div>
+            <span className="eyebrow">ONE PLACE. YOUR PEOPLE.</span>
+            <h2 id="explore-title">
+              A better starting point
+              <br />
+              for your study day.
+            </h2>
+          </div>
+          <p>
+            From the update you almost missed to the resource you’ve been
+            looking for. Start with your department and explore what’s relevant
+            to you.
+          </p>
+        </section>
+        <section className="welcome-features" aria-label="Explore Campus Core">
           {[
             {
-              title: "Department updates",
-              text: "Read sample academic and departmental notices in one focused bulletin.",
+              number: "01",
+              title: "Stay in the loop",
+              text: "A focused department bulletin. Find announcements by topic and level, with sources and dates in view.",
+              section: "announcements" as const,
+              label: "Explore updates",
             },
             {
-              title: "Study resources",
-              text: "Explore original sample study guides, organised by department and level.",
+              number: "02",
+              title: "Find your next resource",
+              text: "A calmer place for study guides and academic materials. Spend more time learning and less time looking.",
+              section: "resources" as const,
+              label: "Browse resources",
             },
             {
-              title: "Campus events",
-              text: "See how event dates, locations and cancellation notices will appear.",
+              number: "03",
+              title: "Be part of campus life",
+              text: "See what’s coming up, check the details, and find the activities that bring your campus together.",
+              section: "events" as const,
+              label: "Discover events",
             },
           ].map((item) => (
-            <article
-              key={item.title}
-              className="rounded-lg border border-border bg-card p-5"
+            <Link
+              href={sectionHref(item.section, sample)}
+              className="welcome-feature"
+              key={item.number}
             >
-              <h2 className="font-semibold">{item.title}</h2>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                {item.text}
-              </p>
-            </article>
+              <span className="feature-number">{item.number}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <span className="text-link">{item.label} ↗</span>
+            </Link>
           ))}
         </section>
+        <section className="welcome-cta">
+          <div>
+            <span className="eyebrow">MAKE YOURSELF AT HOME</span>
+            <h2>Your department is a good place to start.</h2>
+          </div>
+          <Link href="/dashboard" className="welcome-button">
+            Choose my department →
+          </Link>
+        </section>
       </main>
-      <footer className="border-t border-border py-6 text-sm text-muted-foreground">
-        Independent student project. No official university affiliation or
-        endorsement. No sign-in, uploads or tracking.
+      <footer className="welcome-footer">
+        <span className="wordmark">Campus Core.</span>
+        <p>
+          Independent student platform. Not affiliated with or endorsed by
+          UNIZIK. Current content is fictional sample material; directory
+          mappings are not independently verified.
+        </p>
+        <Link href="/dashboard">Explore campus ↗</Link>
       </footer>
     </div>
   );

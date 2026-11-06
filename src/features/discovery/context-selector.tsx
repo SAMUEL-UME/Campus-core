@@ -51,7 +51,7 @@ export function ContextSelector({
     <form action={`/${section}`} method="get" className="space-y-4">
       <fieldset className="grid gap-4 sm:grid-cols-2">
         <legend className="mb-4 text-lg font-semibold">
-          Choose your academic context
+          Your university, department and level
         </legend>
         {fields.map((field) => (
           <div key={field.key} className="min-w-0 space-y-2">
@@ -90,11 +90,11 @@ export function ContextSelector({
         )}
       </div>
       <p className="text-sm text-muted-foreground">
-        Changing a parent choice resets dependent choices. Apply your selection
-        to update the page and navigation.
+        Choose your department to find relevant updates, study resources and
+        events.
       </p>
       <Button type="submit" disabled={!draft.level}>
-        Apply selection
+        Explore my department
       </Button>
     </form>
   );

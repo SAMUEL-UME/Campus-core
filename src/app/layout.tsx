@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
+import { SessionProvider } from "@/features/account/session-provider";
 
 export const metadata: Metadata = {
-  title: "Campus Core | Student demonstration",
+  title: "Campus Core | Your campus, connected",
   description:
     "Explore a provisional student experience across UNIZIK departments. Independent demonstration, not official university information.",
   robots: { index: false, follow: false },
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           Skip to content
         </a>
-        {children}
+        <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
   );

@@ -28,3 +28,6 @@ Owner approved the read-only fictional-data MVP and deferred all Supabase/auth/p
 
 ## Final release QA — November 4
 Existing checks and production build passed (125 tests); production browser journeys and critical keyboard controls passed at 320/390/1280px. Loading and error/retry exercised separately in disposable copies, without release fault hooks. Audit: 17 moderate dev-tool findings, zero production findings, no upgrades. No required environment variables. GO for owner-approved demo deployment, not a verified deployed release. Remaining limits and exact approval-gated handoff: [release checklist](../development/DEMO_RELEASE.md). No push/deployment performed.
+
+## November 5 — active core implementation
+The restored full-product request supersedes the historical read-only scope below. Core publishing and Firestore reads are implemented locally, pending database creation, emulator security tests and live integration verification. See [Firebase setup](../development/FIREBASE_SETUP.md). Continue with verified persistence, then smaller saved-item/preference features, then the grounded Gemini assistant. Do not treat this implementation as launch-ready.

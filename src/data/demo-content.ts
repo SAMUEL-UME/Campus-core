@@ -1,5 +1,7 @@
 export type ContentKind = "announcements" | "resources" | "events";
 export interface DemoRecord {
+  isDemo?: boolean;
+  resourceUrl?: string;
   id: string;
   kind: ContentKind;
   departmentId: string;

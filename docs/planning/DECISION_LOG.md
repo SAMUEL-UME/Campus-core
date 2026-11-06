@@ -18,3 +18,6 @@ Remaining backend decisions: tenant constraints, scoped administrator/reviewer p
 
 ## November 4 — Option A execution update
 Owner approved the read-only fictional-data MVP and deferred all Supabase/auth/publishing work. Landing, dashboard, all three content listings/details, filtering and mobile navigation are implemented. Local production build and 125 tests pass; isolated Chrome journeys at 320/390/1280px passed, including history/refresh and context preservation. CC-102 remains In Review for loading/error retry and fuller accessibility review, not blocked on backend work. No deployment/push performed. See [release evidence and remaining gates](../development/DEMO_RELEASE.md).
+
+## November 4 — owner restores full product direction
+The owner rejected the minimal demo UI and explicitly requested an original redesign informed by supplied Stitch references and earlier Ideas conversations, a real Firebase backend and Gemini integration. This supersedes the previous demo-only feature freeze. Work remains in progress; no live service, publishing workflow, AI integration or launch readiness is claimed. See design/ui.md and development/FIREBASE_SETUP.md. The owner confirmed that no Firebase project exists and no Gemini key is configured. Service setup and verification remain outstanding.
